@@ -2,7 +2,6 @@ section {
     background-image: url('../../image/backsection.webp');
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 104px);
     position: relative;
 }
 section::after {

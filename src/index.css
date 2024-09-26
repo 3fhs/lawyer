@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   background: #191c22;
   font-family: "Amiri", serif;
+  direction: rtl;
 }
 .amiri-regular {
   font-family: "Amiri", serif;

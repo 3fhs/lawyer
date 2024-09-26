@@ -16,6 +16,10 @@
     font-weight: bold;
     margin-bottom: 20px;
 }
+.help-all .help p {
+    font-size: 18px;
+    font-weight: bold;
+}
 .section-help .whose-help {
     background: var(--fifth-color);
     height: 50vh;
@@ -33,6 +37,9 @@
     text-align: center;
     color: var(--sixth-color);
     text-shadow: 0 0 10px BLACK;
+}
+.me {
+    margin-top: 20px;
 }
 /*screen*/
 @media (max-width: 678px) {

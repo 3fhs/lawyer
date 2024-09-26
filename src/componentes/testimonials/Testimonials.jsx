@@ -25,8 +25,7 @@ function Testimonials() {
         scrollbar={{ draggable: true }}
       >
         {kinds.testi.map((item) => (
-          <SwiperSlide key={item.id}> {/* أضف مفتاح فريد */}
-            <img src={item.image} alt='name man' />
+          <SwiperSlide key={item.id}>
             <div className='testimonial'>
               <h2>" {item.talk} "</h2>
               <div className='testi'>
@@ -34,6 +33,7 @@ function Testimonials() {
                 <p>{item.work}</p>
               </div>
             </div>
+            <img src={item.image} alt='name man' />
           </SwiperSlide>
         ))}
       </Swiper>

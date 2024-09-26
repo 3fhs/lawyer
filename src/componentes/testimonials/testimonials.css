@@ -5,9 +5,7 @@
     background: var(--second-color);
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-radius: 6px;
-    overflow: hidden;
 }
 .swiper-slide img {
     width: 50%;

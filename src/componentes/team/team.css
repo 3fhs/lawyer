@@ -5,8 +5,8 @@
     color: white;
     width: fit-content;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
     margin-bottom: 50px;
     border-bottom: 2px solid var(--main-color);
     border-radius: 20px;

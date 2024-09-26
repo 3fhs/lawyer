@@ -12,7 +12,6 @@ export default function NavBar() {
     <header>
         <div className='nav-header'>
         {openList ?  <i className="bi bi-x-lg" onClick={() => setOpenList(false)} ></i> : <i className="bi bi-list" onClick={() => setOpenList(true)} ></i>}
-          <img src={logo} alt='logo' />
           <div className='all-links'>
             <ul className='nav-de'>
               <li> <i className="bi bi-telephone"></i>  01010481061 </li>
@@ -26,6 +25,7 @@ export default function NavBar() {
               <li> تواصل معنا </li>
             </ul>
           </div>
+          <img src={logo} alt='logo' />
         </div>
     </header>
   )
