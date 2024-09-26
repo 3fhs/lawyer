@@ -22,7 +22,6 @@
 }
 .section-help .whose-help {
     background: var(--fifth-color);
-    height: 50vh;
     padding: 0 30px;
     display: flex;
     align-items: center;
