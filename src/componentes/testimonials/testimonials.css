@@ -1,0 +1,51 @@
+.testimonials {
+    padding: 0 30px 50px;
+}
+.swiper-slide {
+    background: var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.swiper-slide img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+}
+.testimonial {
+    max-width: 50%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+.testi {
+    position: absolute;
+}
+/* تغيير أزرار التنقل */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--main-color); /* تغيير لون الأزرار */
+}
+.title {
+    position: relative;
+    padding: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--main-color);
+    text-shadow: 0 0 10px yellow;
+    border-bottom: 2px solid yellow;
+}
+/* تغيير النقاط */
+.swiper-pagination-bullet {
+    background: var(--main-color); /* تغيير لون النقاط */
+}
+@media (max-width: 465px) {
+    .testimonial {
+        font-size: 12px;
+    }
+}

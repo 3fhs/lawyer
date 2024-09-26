@@ -1,0 +1,114 @@
+.footer {
+    background: var(--second-color);
+    padding: 30px 50px;
+}
+.footer .footer-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    border-bottom: 2px solid white;
+    color: white;
+    flex-wrap: wrap;
+}
+.footer-slice {
+    padding: 10px;
+    max-width: 400px;
+    text-align: center;
+}
+.footer-slice img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px yellow;
+}
+.footer-slice p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.footer-links li {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.footer-links li i {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.footer-links li:hover ,
+.footer-links li .bi-facebook:hover {
+    background-color: white;
+    color: blue;
+}
+.footer-links li:hover ,
+.footer-links li .bi-whatsapp:hover {
+    background-color: white;
+    color: green;
+}
+.footer-links li:hover ,
+.footer-links li .bi-messenger:hover {
+    background-color: white;
+    color: #0084ff;
+}
+.footer-links li:hover ,
+.footer-links li .bi-twitter:hover {
+    background-color: white;
+    color: #1DA1F2;
+}
+.footer-addres {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.footer-addres li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.footer-addres li i {
+    font-size: 30px;
+    background-color: white;
+    color: blue;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-addres li h3 {
+
+}
+.footer-addres li p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+.footer .copy {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 2px
+}

@@ -1,0 +1,42 @@
+.section-help .help-all {
+    background: var(--forth-color);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.help-all .help {
+    text-align: center;
+    max-width: 400px;
+    color: var(--second-color);
+}
+.help-all .help h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.section-help .whose-help {
+    background: var(--fifth-color);
+    height: 50vh;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.whose-help img {
+    height: 100%;
+    max-width: 400px;
+}
+.whose-help .how-help {
+    max-width: 400px;
+    text-align: center;
+    color: var(--sixth-color);
+    text-shadow: 0 0 10px BLACK;
+}
+/*screen*/
+@media (max-width: 678px) {
+    .whose-help img {
+        display: none;
+    }
+}

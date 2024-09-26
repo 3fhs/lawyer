@@ -1,0 +1,55 @@
+.team {
+    padding: 50px 30px;
+}
+.team .team-title {
+    color: white;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    border-bottom: 2px solid var(--main-color);
+    border-radius: 20px;
+    padding: 20px 20px;
+    text-shadow: 0 0 5px white;
+    border-top: 2px solid yellow;
+    border-radius: 6px;
+}
+.team .team-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.team .team-card .icon {
+    position: absolute;
+    color: gold;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    font-size: 30px;
+    text-shadow: 0 0 10px greenyellow;
+}
+.team-card .card {
+    max-width: 400px;
+    text-align: center;
+    color: white;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom: 4px solid white;
+    padding: 0 0 20px;
+    position: relative;
+}
+.team-card .card img {
+    width: 250px;
+    height: 250px;
+    object-position: top;
+    object-fit: cover;
+    box-shadow: 0 0 10px white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.team-card .card h2 {
+    margin-bottom: 10px;
+}

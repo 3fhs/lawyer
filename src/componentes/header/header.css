@@ -1,0 +1,112 @@
+section {
+    background-image: url('../../image/backsection.webp');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 104px);
+    position: relative;
+}
+section::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #9997;
+    z-index: 2;
+    top: 0;
+}
+.container {
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.section-office {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90%;
+    padding: 0 30px;
+}
+.section-office .logo-office {
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 50%;
+}
+.section-office .info-office {
+    width: 400px;
+    padding: 30px 20px;
+    text-align: center;
+}
+.section-office .info-office h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #000000;
+    color: #dddddd;
+    text-shadow: 0 0 10px #000000;
+}
+.section-office .info-office p {
+    padding: 0;
+    font-size: 25px;
+    color: #dddddd;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-shadow: 0 0 10px #000000;}
+.section-office .info-office button {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    background: #181b21;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    min-width: 200px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.section-office .info-office button:hover {
+    background-color: #ededed;
+    color: #000000;
+}
+.container .info {
+    width: 100%;
+    height: 10%;
+    background-color: #ffd54f;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+.container .info .info-name {
+    text-align: center;
+    color: #000000;
+    text-shadow: 0 0 10px gold;
+    font-size: 16px;
+}
+.container .info .info-name h3,
+.container .info .info-name p {
+    padding: 0;
+    margin: 0;
+}
+/*screen*/
+@media (max-width: 860px) {
+    .section-office .logo-office {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .section-office .logo-office {
+        display: none;
+    }
+    .container .info .info-name {
+        font-size: 14px;
+    }
+    .section-office .info-office h1 {
+        font-size: 30px;
+    }
+    .section-office .info-office p {
+        font-size: 18px;
+    }
+}
