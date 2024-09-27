@@ -27,9 +27,9 @@ export default function NavBar() {
               <li onClick={() => setOpenList(false)}> تواصل معنا </li>
               <li className="dropdown">
                 <span className="btn-drop"> اخرى 
-                  {openDrop ? <i className="bi bi-caret-up-fill" onClick={() => {setOPenDrop(false) ; setOpenList(false)}}></i> : <i className="bi bi-caret-down-fill" onClick={() => setOPenDrop(true)}></i>}
+                  {openDrop ? <i className="bi bi-caret-up-fill" onClick={() => setOPenDrop(false)}></i> : <i className="bi bi-caret-down-fill" onClick={() => setOPenDrop(true)}></i>}
                   {/* small screen */}
-                  {openDrop ? <i className="bi bi-caret-right-fill"  onClick={() => {setOPenDrop(false) ; setOpenList(false)}}></i> : <i className="bi bi-caret-left-fill" onClick={() => setOPenDrop(true)}></i>} 
+                  {openDrop ? <i className="bi bi-caret-right-fill"  onClick={() => setOPenDrop(false)}></i> : <i className="bi bi-caret-left-fill" onClick={() => setOPenDrop(true)}></i>} 
                  </span>
                 <ul className="lists-drop" style={{clipPath: openDrop ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)" : ""}}>
                   <li className='list-drop' onClick={() => {setOPenDrop(false) ; setOpenList(false)}} > الاستشارات </li>
