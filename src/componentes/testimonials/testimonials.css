@@ -20,6 +20,11 @@
     color: white;
     position: relative;
 }
+.testimonial h2 {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 .testi {
     position: absolute;
 }
@@ -37,6 +42,9 @@
     color: var(--main-color);
     text-shadow: 0 0 10px yellow;
     border-bottom: 2px solid yellow;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
 /* تغيير النقاط */
 .swiper-pagination-bullet {

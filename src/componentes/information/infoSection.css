@@ -37,6 +37,11 @@
     color: var(--sixth-color);
     text-shadow: 0 0 10px BLACK;
 }
+.whose-help .how-help h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
 .me {
     margin-top: 20px;
 }

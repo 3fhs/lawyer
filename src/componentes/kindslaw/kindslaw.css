@@ -16,6 +16,8 @@
 }
 .law-title h1 {
     margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
 .law-title p {
     font-size: 18px;
@@ -55,6 +57,9 @@
 .law-card .card h2 {
     margin-bottom: 10px;
     text-shadow: 0 0 5px white;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
 }
 .law-card .card p {
     font-size: 18px;

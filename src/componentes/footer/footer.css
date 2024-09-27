@@ -21,6 +21,9 @@
     height: 100px;
     border-radius: 50%;
     box-shadow: 0 0 10px yellow;
+    transform: translateX(50%);
+    right: 50%;
+    position: relative;
 }
 .footer-slice p {
     margin-top: 20px;
