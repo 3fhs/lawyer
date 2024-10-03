@@ -11,11 +11,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import './testimonials.css';
+import Title from '../title/Title';
 
 function Testimonials() {
   return (
     <div className='testimonials'>
-      <h1 className='title'> اراء بعض من عملائنا </h1>
+      <Title tit=" اراء بعض العملاء الخاصين بنا " des=" نسعى دائما للتطور و نجتهد للوصول بخدماتنا الى المستوى المرجو منها " />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}

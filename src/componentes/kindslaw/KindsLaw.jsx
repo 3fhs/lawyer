@@ -1,6 +1,7 @@
 import React from 'react';
 import './kindslaw.css';
 import kinds from '../../Data';
+import { Link } from 'react-router-dom';
 
 function KindsLaw() {
   return (
@@ -15,7 +16,7 @@ function KindsLaw() {
                         <img src={law.image} alt='logo-icon'/>
                         <h2> {law.الاسم} </h2>
                         <p> {law.قسم} </p>
-                        <i className="bi bi-arrow-right"></i>
+                        <Link to={`/port/${law.id}`}><i className="bi bi-arrow-right"></i></Link>
                     </div>
             ) 
             )}

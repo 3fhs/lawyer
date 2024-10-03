@@ -1,0 +1,24 @@
+.any-law {
+
+}
+.any-law img {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #111;
+    height: 50vh;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.any-law-info {
+    text-align: center;
+    line-height: 2;
+    font-size: 18px;
+    text-shadow: 0 0 5px black;
+}
+.any-law-info h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: lavender;
+}

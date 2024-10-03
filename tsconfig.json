@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",                     // أو أي إصدار آخر تريده
+    "module": "commonjs",                // أو "esnext" أو "es6" حسب الحاجة
+    "strict": true,                       // يمكن أن تُحَدِّد هذه القيمة حسب الحاجة
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["node_modules/@types", "@types"], // تأكد من أن مسار @types صحيح
+    "outDir": "./dist",                  // دليل الإخراج
+    "rootDir": "./src"                   // دليل المصدر
+  },
+  "include": [
+    "src/",                          // تأكد من تضمين src
+    "@types/"                        // تأكد من تضمين ملفات التعريف
+  ],
+  "exclude": [
+    "node_modules",                      // استبعاد مجلد node_modules
+    "**/*.spec.ts"                       // استبعاد ملفات الاختبار
+  ]
+}

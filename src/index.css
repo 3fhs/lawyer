@@ -21,6 +21,29 @@ body {
   font-family: "Amiri", serif;
   direction: rtl;
 }
+/* تصميم شريط التمرير */
+::-webkit-scrollbar {
+  width: 12px; /* عرض شريط التمرير */
+  height: 12px; /* ارتفاع شريط التمرير (لأشرطة التمرير الأفقية) */
+}
+
+/* تصميم الجزء الخلفي من شريط التمرير */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* لون الخلفية */
+  border-radius: 10px; /* زوايا دائرية */
+}
+
+/* تصميم الجزء القابل للسحب من شريط التمرير */
+::-webkit-scrollbar-thumb {
+  background: #888; /* لون الجزء القابل للسحب */
+  border-radius: 10px; /* زوايا دائرية */
+}
+
+/* تأثير عند تمرير الفأرة على الجزء القابل للسحب */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* لون الجزء القابل للسحب عند المرور عليه */
+}
+
 .amiri-regular {
   font-family: "Amiri", serif;
   font-weight: 400;
@@ -49,4 +72,33 @@ ul {
 }
 a {
   text-decoration: none;
+}
+section {
+    padding: 20px 30px;
+    color: white;
+    min-height: 100vh;
+    background: linear-gradient(45deg, black, #bc4848, black);
+    position: relative;
+    z-index: 2;
+}
+.btn-click {
+  position: absolute;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  background: #181b21;
+  color: white;
+  outline: none;
+  font-weight: bold;
+  min-width: 200px;
+  cursor: pointer;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+.btn-click:hover {
+  background-color: var(--second-color);
+  color: #dddddd;
 }

@@ -57,3 +57,53 @@
 .team-card .card h2 {
     margin-bottom: 10px;
 }
+/*link team*/
+.one-of-theteam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link-team {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.link-team img {
+    height: 50vh;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    max-width: 250px;
+}
+.link-team-info {
+    padding: 20px;
+}
+.link-team-info h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: 0 0 5px black;
+}
+.link-team-info ul {
+    list-style: disc;
+    margin-bottom: 10px;
+    text-align: start;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.link-team-info ul h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 3px;
+}
+.link-team-info ul li {
+    padding: 15px;
+    font-size: 18px;
+}

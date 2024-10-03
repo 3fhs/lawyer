@@ -1,0 +1,62 @@
+.contact-me {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-me form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 10px white;
+    padding: 20px;
+    backdrop-filter: saturate(0.8);
+    border-radius: 12px;
+}
+.contact-me form label {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 1px BLACK;
+    letter-spacing: 1px;
+}
+.contact-me form input {
+    outline: none;
+    width: 100%;
+    border: 2px solid black;
+    height: 50px;
+    font-size: 16px;
+    color: #999;
+    border-radius: 6px;
+    box-shadow: inset 0 0 5px black;
+    padding: 10px 20px;
+}
+.contact-me form textarea {
+    resize: none;
+    width: 100%;
+    min-height: 300px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 5px black;
+    padding: 10px;
+    color: #999;
+    overflow: scroll;
+    outline: none;
+}
+.contact-me form .btn-contact {
+    color: white;
+    cursor: pointer;
+    background: darkblue;
+    transition: 0.3s;
+    border: none;
+    box-shadow: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.contact-me form .btn-contact:hover {
+    background: #303f9f;
+}

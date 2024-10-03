@@ -1,6 +1,7 @@
 import React from 'react';
 import './team.css';
 import kinds from '../../Data';
+import { Link } from 'react-router-dom';
 
 export default function Team() {
   return (
@@ -11,7 +12,9 @@ export default function Team() {
         <div className='team-card'>
             {kinds.team.map(lawyer => (
                     <div className='card' key={lawyer.id}>
-                        <img src={lawyer.image} alt='logo-icon'/>
+                        <Link to={`/team/${lawyer.id}`}>
+                           <img src={lawyer.image} alt='logo-icon'/>
+                        </Link>
                         <h2> أ / {lawyer.name} </h2>
                         <p> {lawyer.work} </p>
                         <div className='icon'>

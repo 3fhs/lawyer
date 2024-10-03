@@ -1,10 +1,10 @@
-section {
+.header {
     background-image: url('../../image/backsection.webp');
     background-size: cover;
     background-position: center;
     position: relative;
 }
-section::after {
+.header::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -51,7 +51,8 @@ section::after {
     color: #dddddd;
     letter-spacing: 1px;
     word-spacing: 2px;
-    text-shadow: 0 0 10px #000000;}
+    text-shadow: 0 0 10px #000000;
+}
 .section-office .info-office button {
     padding: 20px;
     font-size: 20px;
@@ -63,11 +64,11 @@ section::after {
     font-weight: bold;
     min-width: 200px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .section-office .info-office button:hover {
-    background-color: #ededed;
-    color: #000000;
+    background-color: var(--second-color);
+    color: #dddddd;
 }
 .container .info {
     width: 100%;

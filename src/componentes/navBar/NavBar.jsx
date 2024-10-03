@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../image/lawyer-logo-two.webp';
 import './navBar.css';
+import { Link } from 'react-router-dom';
 
 
 export default function NavBar() {
@@ -21,10 +22,10 @@ export default function NavBar() {
               <li> <i className="bi bi-geo-alt"></i> شارع شبرا الدور الاول شقة 1002 </li>
             </ul>
             <ul className='nav-links' style={{clipPath: openList ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)" : ""}}>
-              <li onClick={() => setOpenList(false)}> الرئيسية </li>
-              <li onClick={() => setOpenList(false)}> من نحن </li>
-              <li onClick={() => setOpenList(false)}> نماذج قضايا </li>
-              <li onClick={() => setOpenList(false)}> تواصل معنا </li>
+              <Link to="/" onClick={() => setOpenList(false)}> الرئيسية </Link>
+              <Link to="/we-are" onClick={() => setOpenList(false)}> من نحن </Link>
+              <Link to="/write" onClick={() => setOpenList(false)}> نماذج و صيغ قانونية </Link>
+              <Link to="/contact" onClick={() => setOpenList(false)}> تواصل معنا </Link>
               <li className="dropdown">
                 <span className="btn-drop"> اخرى 
                   {openDrop ? <i className="bi bi-caret-up-fill" onClick={() => setOPenDrop(false)}></i> : <i className="bi bi-caret-down-fill" onClick={() => setOPenDrop(true)}></i>}
@@ -32,8 +33,8 @@ export default function NavBar() {
                   {openDrop ? <i className="bi bi-caret-right-fill"  onClick={() => setOPenDrop(false)}></i> : <i className="bi bi-caret-left-fill" onClick={() => setOPenDrop(true)}></i>} 
                  </span>
                 <ul className="lists-drop" style={{clipPath: openDrop ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)" : ""}}>
-                  <li className='list-drop' onClick={() => {setOPenDrop(false) ; setOpenList(false)}} > الاستشارات </li>
-                  <li className='list-drop' onClick={() => {setOPenDrop(false) ; setOpenList(false)}} > صيغ العقود </li>
+                  <Link to="/consultations" className='list-drop' onClick={() => {setOPenDrop(false) ; setOpenList(false)}} > الاستشارات </Link>
+                  <Link to="/login" className='list-drop' onClick={() => {setOPenDrop(false) ; setOpenList(false)}} > تسجيل الدخول </Link>
                 </ul>
               </li>
             </ul>

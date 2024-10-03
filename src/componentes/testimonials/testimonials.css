@@ -33,19 +33,6 @@
 .swiper-button-prev {
     color: var(--main-color); /* تغيير لون الأزرار */
 }
-.title {
-    position: relative;
-    padding: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: var(--main-color);
-    text-shadow: 0 0 10px yellow;
-    border-bottom: 2px solid yellow;
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: bold;
-}
 /* تغيير النقاط */
 .swiper-pagination-bullet {
     background: var(--main-color); /* تغيير لون النقاط */
