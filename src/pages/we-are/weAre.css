@@ -3,6 +3,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-evenly;
 }
 .we-are .logo-office {
     height: 50vh;
