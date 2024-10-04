@@ -13,7 +13,7 @@ export default function Writeing() {
 
     useEffect(() => {
         // جلب البيانات من الـ API
-        fetch("http://localhost:4000/data")
+        fetch("http://localhost:9000/data")
             .then(res => res.json())
             .then(data => {
                 if (data && data[0] && data[0].buying) {
