@@ -1,26 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import NavBar from "../../componentes/navBar/NavBar";
 import Footer from "../../componentes/footer/Footer";
 import "./writeing.css";
 import jsPDF from 'jspdf';
 import Title from '../../componentes/title/Title';
+import kinds from '../../Data'; // تأكد من أن المسار صحيح
 
 export default function Writeing() {
-    const [contratos, setContratos] = useState([]);
     const [textAreaContent, setTextAreaContent] = useState("");
     const [isEditing, setIsEditing] = useState(false);
-    const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        // جلب البيانات من الـ API
-        fetch("http://localhost:9000/data")
-            .then(res => res.json())
-            .then(data => {
-                if (data && data[0] && data[0].buying) {
-                    setContratos(data[0].buying);
-                }
-            });
-    }, []);
+    const [selectedContrato, setSelectedContrato] = useState(null); // تخزين العقد المحدد
 
     const handleImageClick = (contrato) => {
         if (contrato.text) {
@@ -28,17 +17,19 @@ export default function Writeing() {
                 Object.entries(item).map(([key, value]) => `${key}: ${value}`).join("\n")
             ).join("\n\n");
             setTextAreaContent(combinedText);
+            setSelectedContrato(contrato); // تخزين العقد المحدد
             setIsEditing(true);
         }
     };
 
     const handlePdfDownload = (e) => {
         e.preventDefault();
-        setLoading(true); // بدء التحميل
-    
+
+        if (!selectedContrato) return; // تأكد من أن هناك عقد محدد
+
         const pdf = new jsPDF();
         const text = textAreaContent; // نص الـ <textarea>
-    
+
         // إضافة النص إلى PDF
         pdf.text(text, 10, 10, {
             maxWidth: 190, // عرض النص في الصفحة
@@ -46,23 +37,20 @@ export default function Writeing() {
             fontSize: 12, // حجم الخط
             font: 'Amiri', // الخط العربي إذا كان متاحًا
         });
-    
-        pdf.save('document.pdf');
-        setLoading(false); // إنهاء التحميل
+
+        pdf.save(`${selectedContrato.title}.pdf`); // حفظ الملف باسم العقد
     };
-    
 
     return (
         <>
-            {loading && <div>Loading...</div>}
             <div>
                 <NavBar />
                 <div className="writing">
                     <Title tit=" نماذج الصيغ القانونية " des=" مجموعة متنوعة من النماذج و الصيغ القانونية " />
                     
                     <div className="write-show">
-                        {/* عرض العقود */}
-                        {contratos.map((contrato, index) => (
+                        {/* تحقق من وجود البيانات قبل استخدام map */}
+                        {kinds.data && kinds.data[0].buying && kinds.data[0].buying.map((contrato, index) => (
                             <button key={index} className="btn" onClick={() => handleImageClick(contrato)}>
                                 {contrato.image && <img src={contrato.image} alt={contrato.title} />}
                                 <h1>{contrato.title}</h1>
