@@ -1,15 +1,21 @@
 .section-help .help-all {
-    background: var(--forth-color);
+    background: var(--danger-color);
     display: flex;
     justify-content: space-evenly;
     padding: 50px 30px;
     gap: 20px;
     flex-wrap: wrap;
+    border-bottom: 2px solid var(--light-color);
 }
 .help-all .help {
     text-align: center;
-    max-width: 400px;
-    color: var(--second-color);
+    color: var(--white-color);
+    border-bottom: 2px solid var(--white-color);
+    box-shadow: 0 0 5px var(--black-color);
+    max-width: 300px;
+    padding: 10px 20px;
+    text-shadow: 0 0 5px var(--black-color);
+    border-radius: 6px;
 }
 .help-all .help h2 {
     font-size: 30px;
@@ -21,11 +27,12 @@
     font-weight: bold;
 }
 .section-help .whose-help {
-    background: var(--fifth-color);
+    background: var(--danger-color);
     padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    color: var(--white-color);
 }
 .whose-help img {
     height: 100%;

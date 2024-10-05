@@ -1,5 +1,12 @@
 .testimonials {
     padding: 0 30px 50px;
+    background: linear-gradient(45deg, var(--black-color), var(--danger-color) 50%, var(--black-color));
+}
+.swiper {
+    border-radius: 6px;
+    border: 2px solid var(--black-color);
+    box-shadow: 0 0 5px var(--black-color);
+    overflow: hidden;
 }
 .swiper-slide {
     background: var(--second-color);
@@ -23,10 +30,12 @@
 .testimonial h2 {
     font-size: 18px;
     font-weight: bold;
-    letter-spacing: 1px;
+    line-height: 2;
 }
 .testi {
     position: absolute;
+    bottom: -80px;
+    right: 15px;
 }
 /* تغيير أزرار التنقل */
 .swiper-button-next,

@@ -41,39 +41,22 @@
     font-weight: bold;
     margin-bottom: 20px;
     padding: 10px;
-    border-bottom: 2px dashed #000000;
-    color: #dddddd;
-    text-shadow: 0 0 10px #000000;
+    border-bottom: 5px dashed var(--black-color);
+    color: var(--white-color);
+    text-shadow: 0 0 10px var(--black-color);
 }
 .section-office .info-office p {
     padding: 10px;
     font-size: 25px;
-    color: #dddddd;
+    color: var(--white-color);
     letter-spacing: 1px;
     word-spacing: 2px;
-    text-shadow: 0 0 10px #000000;
-}
-.section-office .info-office button {
-    padding: 20px;
-    font-size: 20px;
-    border-radius: 20px;
-    border: none;
-    background: #181b21;
-    color: white;
-    outline: none;
-    font-weight: bold;
-    min-width: 200px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.section-office .info-office button:hover {
-    background-color: var(--second-color);
-    color: #dddddd;
+    text-shadow: 0 0 10px var(--black-color);
 }
 .container .info {
     width: 100%;
     height: 10%;
-    background-color: #ffd54f;
+    background-color: var(--orange-color);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -82,9 +65,10 @@
 }
 .container .info .info-name {
     text-align: center;
-    color: #000000;
-    text-shadow: 0 0 10px gold;
+    color: var(--black-color);
+    text-shadow: 0 0 5px var(--danger-color);
     font-size: 16px;
+    font-weight: bold;
 }
 .container .info .info-name h3,
 .container .info .info-name p {

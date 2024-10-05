@@ -1,23 +1,41 @@
 .title {
     position: relative;
     padding: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
     text-align: center;
-    color: var(--main-color);
-    text-shadow: 0 0 10px white;
+    color: var(--white-color);
+    text-shadow: 0 0 5px var(--black-color);
     margin-bottom: 20px;
     font-size: 30px;
     font-weight: bold;
+    max-width: 500px;
     line-height: 2;
 }
 .title h1 {
-    letter-spacing: 3px;
     font-size: 35px;
     font-weight: bold;
 }
 .title p {
-    letter-spacing: 3px;
     padding-bottom: 20px;
-    border-bottom: 2px solid yellow;
+    font-size: 20px;
+    border-bottom: 2px solid var(--light-color);
+    position: relative;
+}
+.title p::after,
+.title p::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: var(--light-color);
+    border-radius: 50%;
+}
+.title p::after {
+    bottom: -10px;
+    right: 0px;
+}
+.title p::before {
+    bottom: -10px;
+    left: 0px;
 }

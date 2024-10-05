@@ -1,5 +1,8 @@
 .team {
-    padding: 50px 30px;
+    padding: 0 30px 50px;
+    background: linear-gradient(90deg, var(--danger-color), var(--black-color) 50%, var(--danger-color));
+    border-top: 2px solid var(--light-color);
+    border-bottom: 2px solid var(--light-color);
 }
 .team .team-title {
     color: white;
@@ -28,20 +31,20 @@
 }
 .team .team-card .icon {
     position: absolute;
-    color: gold;
+    color: var(--light-color);
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
     font-size: 30px;
-    text-shadow: 0 0 10px greenyellow;
+    text-shadow: 0 0 10px var(--danger-color);
 }
 .team-card .card {
     max-width: 400px;
     text-align: center;
-    color: white;
+    color: var(--white-color);
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid var(--white-color);
     padding: 0 0 20px;
     position: relative;
 }
@@ -50,7 +53,7 @@
     height: 250px;
     object-position: top;
     object-fit: cover;
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 5px var(--white-color);
     border-radius: 10px;
     margin-bottom: 10px;
 }

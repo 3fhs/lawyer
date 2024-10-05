@@ -1,48 +1,28 @@
 .law {
-    background: var(--sixth-color);
-    padding: 50px 30px 120px;
+    background: linear-gradient(90deg, var(--black-color), var(--danger-color) 50%, var(--black-color));
+    padding: 0 30px 50px;
     position: relative;
-}
-.law-title {
-    width: fit-content;
-    transform: translateX(50%);
-    right: 50%;
-    position: relative;
-    text-align: center;
-    margin-bottom: 50px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--third-color);
-    color: var(--second-color);
-}
-.law-title h1 {
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: bold;
-}
-.law-title p {
-    font-size: 18px;
-    text-shadow: 0 0 1px BLACK;
 }
 .law-card {
     display: flex;
     align-items: start;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
 }
 .law-card .card {
     width: 300px;
-    background: var(--fifth-color);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 10px var(--fifth-color);
     color: white;
     position: relative;
     cursor: pointer;
     transition: 0.3s;
     letter-spacing: 1px;
     padding-bottom: 40px;
+    backdrop-filter: blur(120px);
+    box-shadow: 0 0 5px var(--red-color);
 }
 .law-card .card:hover {
     transform: scale(1.1);
@@ -72,7 +52,7 @@
     right: 0px;
     cursor: pointer;
     border-radius: 50% 50% 0 50%;
-    background: var(--third-color);
+    background: var(--red-color);
     width: 40px;
     height: 40px;
     display: flex;

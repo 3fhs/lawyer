@@ -2,14 +2,12 @@ import React from 'react';
 import './kindslaw.css';
 import kinds from '../../Data';
 import { Link } from 'react-router-dom';
+import Title from '../title/Title';
 
 function KindsLaw() {
   return (
     <div className='law'>
-        <div className='law-title'>
-            <h1> الاقسام القانونية </h1>
-            <p> الاقسام القانونية التى يعمل عليها مكتبنا و نقدم خدماتها بكفاءة مهنية عالية  </p>
-        </div>
+      <Title tit=" الاقسام القانونية " des=" الاقسام القانونية التى يعمل عليها مكتبنا و نقدم خدماتها بكفاءة مهنية عالية "/>
         <div className='law-card'>
             {kinds.lawport.map(law => (
                     <div className='card' key={law.id}>
@@ -21,7 +19,6 @@ function KindsLaw() {
             ) 
             )}
         </div>
-        <button className='btn-click'> لرؤية جميع الاقسام </button>
     </div>
   )
 }

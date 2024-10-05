@@ -10,7 +10,7 @@ export default function WeAre() {
     <div>
         <NavBar/>
         <section>
-          <Title tit="{مكتب الاستاذ / محمد عبد الغنى حسين}" des="اتشرف و مكتبى بتقديم الخدمات القانونية فى كافة اعمال المحاماه"/>
+          <Title tit="مكتب الاستاذ / محمد عبد الغنى حسين" des="اتشرف و مكتبى بتقديم الخدمات القانونية فى كافة اعمال المحاماه"/>
             <div className="we-are">
               <img src={logo} alt="logo office" className='logo-office'/>
               <div className="we-are-info">

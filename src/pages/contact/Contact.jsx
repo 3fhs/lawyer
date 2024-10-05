@@ -57,7 +57,7 @@ export default function Contact() {
               <textarea id="message" name="message" placeholder='من فضلك اكتب رسالتك و استفسارك لنا' required
                 value={text} onChange={(e) => setText(e.target.value)}></textarea>
 
-              <input className='btn-contact' type="submit" value="إرسال"/>
+              <input className='btn-click' type="submit" value="إرسال"/>
             </form>
           </div>
         </section>

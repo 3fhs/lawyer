@@ -43,9 +43,8 @@ export default function Writeing() {
 
     return (
         <>
-            <div>
                 <NavBar />
-                <div className="writing">
+                <section className="writing">
                     <Title tit=" نماذج الصيغ القانونية " des=" مجموعة متنوعة من النماذج و الصيغ القانونية " />
                     
                     <div className="write-show">
@@ -71,12 +70,11 @@ export default function Writeing() {
                                 />
                             </div>
                             <br />
-                            <button onClick={handlePdfDownload}>تحويل إلى PDF</button>
+                            <button className='btn-click' onClick={handlePdfDownload}>تحويل إلى PDF</button>
                         </div>
                     )}
-                </div>
+                </section>
                 <Footer />
-            </div>
         </>
     );
 }

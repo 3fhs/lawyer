@@ -35,6 +35,7 @@ export default function NavBar() {
                 <ul className="lists-drop" style={{clipPath: openDrop ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)" : ""}}>
                   <Link to="/consultations" className='list-drop' onClick={() => {setOPenDrop(false) ; setOpenList(false)}} > الاستشارات </Link>
                   <Link to="/login" className='list-drop' onClick={() => {setOPenDrop(false) ; setOpenList(false)}} > تسجيل الدخول </Link>
+                  <li className='list-drop' onClick={() => setOPenDrop(false)}>  اغلاق القائمة المنبثقة  </li>
                 </ul>
               </li>
             </ul>

@@ -8,65 +8,61 @@
   box-sizing: border-box;
 }
 :root {
-  --main-color: #ffd54f;
-  --second-color: #303f9f;
-  --third-color: #171b1f;
-  --forth-color: #d5be7a;
-  --fifth-color: #638b9e;
-  --sixth-color: #fbf6da;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --danger-color: #bc4848;
+  --red-color: #ff5656;
+  --light-color: #ffd700;
+  --orange-color: #ffd558;
 }
 body {
   min-height: 100vh;
   background: #191c22;
-  font-family: "Amiri", serif;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
   direction: rtl;
 }
-/* تصميم شريط التمرير */
-::-webkit-scrollbar {
-  width: 12px; /* عرض شريط التمرير */
-  height: 12px; /* ارتفاع شريط التمرير (لأشرطة التمرير الأفقية) */
+.ibm-plex-sans-arabic-thin {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
-/* تصميم الجزء الخلفي من شريط التمرير */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* لون الخلفية */
-  border-radius: 10px; /* زوايا دائرية */
+.ibm-plex-sans-arabic-extralight {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
-/* تصميم الجزء القابل للسحب من شريط التمرير */
-::-webkit-scrollbar-thumb {
-  background: #888; /* لون الجزء القابل للسحب */
-  border-radius: 10px; /* زوايا دائرية */
+.ibm-plex-sans-arabic-light {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-/* تأثير عند تمرير الفأرة على الجزء القابل للسحب */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* لون الجزء القابل للسحب عند المرور عليه */
-}
-
-.amiri-regular {
-  font-family: "Amiri", serif;
+.ibm-plex-sans-arabic-regular {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.amiri-bold {
-  font-family: "Amiri", serif;
+.ibm-plex-sans-arabic-medium {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-sans-arabic-semibold {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-sans-arabic-bold {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.amiri-regular-italic {
-  font-family: "Amiri", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.amiri-bold-italic {
-  font-family: "Amiri", serif;
-  font-weight: 700;
-  font-style: italic;
-}
 ul {
   list-style: none;
 }
@@ -75,30 +71,26 @@ a {
 }
 section {
     padding: 20px 30px;
-    color: white;
+    width: 100%;
+    color: var(--white-color);
     min-height: 100vh;
-    background: linear-gradient(45deg, black, #bc4848, black);
+    background: linear-gradient(45deg, var(--black-color), var(--danger-color), var(--black-color));
     position: relative;
     z-index: 2;
 }
 .btn-click {
-  position: absolute;
   padding: 20px;
   font-size: 20px;
-  border-radius: 20px;
-  border: none;
-  background: #181b21;
-  color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 5px var(--black-color);
+  background: var(--danger-color);
+  color: var(--white-color);
   outline: none;
   font-weight: bold;
-  min-width: 200px;
   cursor: pointer;
   transition: 0.3s;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px;
+  min-width: 250px;
 }
 .btn-click:hover {
-  background-color: var(--second-color);
-  color: #dddddd;
+  background-color: var(--red-color);
 }

@@ -20,17 +20,17 @@ export default function Footer() {
             <ul className='footer-addres'>
                 <li> 
                     <i className="bi bi-envelope"></i>
-                    <h3>Email :</h3> 
+                    <h3>: Email</h3> 
                     <p>mohamed@gmail.com </p>
                 </li>
                 <li> 
                     <i className="bi bi-telephone"></i> 
-                    <h3>Phone :</h3> 
+                    <h3>: Phone</h3> 
                     <p>020 / 012345678910</p>
                 </li>
                 <li> 
                     <i className="bi bi-geo-alt"></i>
-                    <h3>Our Office :</h3> 
+                    <h3>: Our Office</h3> 
                     <p> شارع شبرا الدور الاول شقة 1002 </p>
                 </li>
             </ul>

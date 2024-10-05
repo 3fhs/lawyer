@@ -2,13 +2,12 @@ import React from 'react';
 import './team.css';
 import kinds from '../../Data';
 import { Link } from 'react-router-dom';
+import Title from "../title/Title";
 
 export default function Team() {
   return (
     <div className='team'>
-        <div className='team-title'>
-            <h1> السادة اعضاء المكتب </h1>
-        </div>
+      <Title tit=" السادة اعضاء المكتب " />
         <div className='team-card'>
             {kinds.team.map(lawyer => (
                     <div className='card' key={lawyer.id}>
