@@ -9,10 +9,14 @@
     overflow: hidden;
 }
 .swiper-slide {
-    background: var(--second-color);
     display: flex;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 6px;
 }
 .swiper-slide img {
     width: 50%;
@@ -40,11 +44,11 @@
 /* تغيير أزرار التنقل */
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--main-color); /* تغيير لون الأزرار */
+    color: var(--white-color); /* تغيير لون الأزرار */
 }
 /* تغيير النقاط */
 .swiper-pagination-bullet {
-    background: var(--main-color); /* تغيير لون النقاط */
+    background: var(--black-color); /* تغيير لون النقاط */
 }
 @media (max-width: 465px) {
     .testimonial {
