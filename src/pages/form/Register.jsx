@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function Register() {
   return (
     <>
-    <section>
+    <section className="sec-form">
         <div className="register">
         <Title tit=" تسجيل الدخول للموقع "/>
             <form>

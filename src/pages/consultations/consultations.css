@@ -8,6 +8,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+    padding: 10px;
 }
 .consultation-form input {
     height: 50px;
@@ -15,6 +16,11 @@
     outline: none;
     padding: 10px;
     color: var(--black-color);
+    border: 3px solid transparent;
+    transition: 0.3s;
+}
+.consultation-form input:focus {
+    border-color: var(--black-color);
 }
 .consultation-form .consultation-type {
     color: var(--white-color);
@@ -25,7 +31,7 @@
     border-radius: 6px;
     padding: 10px 20px;
     cursor: pointer;
-    background: var(--red-color);
+    background: var(--danger-color);
     font-size: 20px;
     font-weight: bold;
 }
@@ -33,6 +39,7 @@
     letter-spacing: 1px;
     line-height: 2;
     resize: none;
+    max-width: 500px;
     width: 100%;
     min-height: 300px;
     outline: none;
@@ -42,5 +49,9 @@
     border: none;
     border-radius: 6px;
     overflow: scroll;
+    box-shadow: 0 0 10px var(--white-color);
+    transition: 0.3s;
+}
+.consultation-form textarea:focus {
     box-shadow: 0 0 10px var(--black-color);
 }

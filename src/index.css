@@ -14,6 +14,7 @@
   --red-color: #ff5656;
   --light-color: #ffd700;
   --orange-color: #ffd558;
+  --form-color: #1c0d0d;
 }
 body {
   min-height: 100vh;
@@ -61,7 +62,7 @@ section {
     z-index: 2;
 }
 .btn-click {
-  padding: 20px;
+  padding: 10px 20px;
   font-size: 20px;
   border-radius: 12px;
   box-shadow: 0 0 5px var(--black-color);
@@ -73,16 +74,34 @@ section {
   transition: 0.3s;
   min-width: 250px;
   text-align: center;
+  letter-spacing: 2px;
 }
 .btn-click:hover {
   background-color: var(--red-color);
+  color: var(--black-color);
+}
+.sec-form {
+  background-image: url("./image/back-contact.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.sec-form::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #10101091;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 @media (max-width: 400px) {
   section {
     padding: 20px 0;
   }
   .btn-click {
-    width: 100%;
+    width: 50%;
     min-width: 0;
     letter-spacing: 2px;
     padding: 10px;

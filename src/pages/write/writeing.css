@@ -56,6 +56,9 @@
     gap: 10px;
     padding: 20px;
     margin-bottom: 20px;
+    border-top: 2px solid var(--red-color);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
 }
 .write-text textarea {
     color: var(--black-color);
@@ -67,7 +70,7 @@
     border-radius: 10px;
     overflow: scroll;
     outline: none;
-    border: 20px solid var(--black-color);
+    border: 5px solid var(--black-color);
     box-shadow: 0 0 10px var(--black-color);
     line-height: 3;
     letter-spacing: 1px;

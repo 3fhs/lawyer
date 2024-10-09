@@ -118,6 +118,9 @@
     background-color: var(--white-color);
     border-radius: 0 0 0 40px;
   }
+  .dropdown .lists-drop .bi-arrow-return-right {
+    display: none;
+  }
   /*header in media*/
   @media (max-width: 852px) {
     .nav-de > :nth-last-child(1) {
@@ -151,7 +154,7 @@
     }
     .nav-links {
         position: absolute;
-        bottom: -342px;
+        top: 100%;
         flex-direction: column;
         border-bottom-left-radius: 5px;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -267,15 +270,11 @@
     .dropdown .btn-drop .bi-caret-right-fill, .dropdown .btn-drop .bi-caret-left-fill {
       width: 100%;
     }
-    .nav-links {
-      bottom: -372px;
-    }
   }
   @media (max-width: 292px) {
     .nav-links {
       width: 100%;
       bottom: -342px;
       padding: 10px 0;
-      top: 100%;
     }
   }

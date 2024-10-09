@@ -41,7 +41,7 @@ export default function Contact() {
   return (
     <>
         <NavBar/>
-        <section>
+        <section className="sec-form">
           <Title tit=" تستطيع مراسلتنا عن طريق البريد " des=" مع تحياتى لكم أ / محمد عبد الغنى حسين "/>
           <div className="contact-me">
             <form ref={form} onSubmit={sendEmail}>

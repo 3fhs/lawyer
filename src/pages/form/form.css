@@ -17,21 +17,25 @@
     border-radius: 5px;
     font-size: 16px;
     color: var(--black-color);
+    border: 3px solid transparent;
     height: 65px;
+    transition: 0.3s;
   }
 
   .form-control input:focus {
     outline: none;
-    border-color: #555;
+    border-color: var(--black-color);
   }
   .register-link {
     text-align: center;
     color: var(--white-color);
     padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
   }
 
   .register-link a {
-    color: var(--light-color);
     font-size: 20px;
-    padding-bottom: 10px;
+    text-decoration: underline;
+    color: var(--red-color);
   }
