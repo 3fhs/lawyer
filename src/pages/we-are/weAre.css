@@ -18,13 +18,24 @@
     line-height: 2;
 }
 .we-are-info h1 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     text-shadow: 0 0 2px BLACK;
     color: var(--white-color);
+    margin-bottom: 20px;
 }
 .we-are-info p {
-    color: #dedede;
+    color: var(--white-color);
     font-size: 18px;
     letter-spacing: 0.5px;
+}
+.we-are-info ul {
+    list-style: disc;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 0 30px;
+    gap: 20px;
+    font-size: 18px;
 }

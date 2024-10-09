@@ -6,6 +6,7 @@ export default function Title({tit, des }) {
     <div className='title'>
         <h1> {tit} </h1>
         <p> {des} </p>
+        <span> LAWYER </span>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import '@fontsource/amiri'; // استيراد الخط
 import './index.css';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import App from './App';

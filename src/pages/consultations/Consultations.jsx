@@ -11,7 +11,7 @@ export default function Consultations() {
     <section>
       <Title tit=" وجه الينا استشارتك و سيتم الرد لاحقا "/>
         <div className="consultations">
-          <form class="consultation-form">
+          <form className="consultation-form">
             <input type="text" name="name" placeholder="اكتب اسمك هنا" required/>
             
             <input type="email" name="email" placeholder="اكتب وسيلة التواصل" required/>
@@ -27,7 +27,7 @@ export default function Consultations() {
             
             <textarea name="details" placeholder="اكتب تفاصيل مشكلتك القانونية" rows="5" required></textarea>
             
-            <button className='btn-click' type="submit">أرسل استشارتك الآن</button>
+            <button className='btn-click' type="submit"> أرسال </button>
           </form>
         </div>
     </section>

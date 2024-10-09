@@ -1,15 +1,52 @@
 import React, { useState } from 'react';
+import { Document, Page, Text, View, StyleSheet, PDFDownloadLink, Font } from '@react-pdf/renderer';
 import NavBar from "../../componentes/navBar/NavBar";
 import Footer from "../../componentes/footer/Footer";
-import "./writeing.css";
-import jsPDF from 'jspdf';
 import Title from '../../componentes/title/Title';
-import kinds from '../../Data'; // تأكد من أن المسار صحيح
+import kinds from '../../Data'; 
+import arabicFont from '../../font/Amiri.ttf'; // إضافة الخط العربي
+import "./writeing.css";
 
-export default function Writeing() {
+// تسجيل الخط العربي
+Font.register({
+  family: 'Amiri',
+  src: arabicFont,
+});
+
+// أنماط PDF
+const styles = StyleSheet.create({
+  page: {
+    padding: 30,
+    direction: 'rtl', // تعيين اتجاه النص لليمين
+  },
+  text: {
+    fontFamily: 'Amiri', // استخدام الخط العربي
+    fontSize: 12,
+    textAlign: 'right',
+  },
+});
+
+// دالة تحويل الأرقام
+const convertToArabicNumbers = (text) => {
+    const arabicNumbers = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+    return text.replace(/\d/g, (digit) => arabicNumbers[digit]);
+};
+
+// مكون PDF
+const PDFDocument = ({ textContent }) => (
+  <Document>
+    <Page style={styles.page}>
+      <View>
+        <Text style={styles.text}>{textContent}</Text>
+      </View>
+    </Page>
+  </Document>
+);
+
+const Writeing = () => {
     const [textAreaContent, setTextAreaContent] = useState("");
-    const [isEditing, setIsEditing] = useState(false);
-    const [selectedContrato, setSelectedContrato] = useState(null); // تخزين العقد المحدد
+    const [isEditing, setIsEditing] = useState(false); 
+    const [selectedContrato, setSelectedContrato] = useState(null); 
 
     const handleImageClick = (contrato) => {
         if (contrato.text) {
@@ -17,64 +54,51 @@ export default function Writeing() {
                 Object.entries(item).map(([key, value]) => `${key}: ${value}`).join("\n")
             ).join("\n\n");
             setTextAreaContent(combinedText);
-            setSelectedContrato(contrato); // تخزين العقد المحدد
+            setSelectedContrato(contrato); 
             setIsEditing(true);
         }
     };
 
-    const handlePdfDownload = (e) => {
-        e.preventDefault();
-
-        if (!selectedContrato) return; // تأكد من أن هناك عقد محدد
-
-        const pdf = new jsPDF();
-        const text = textAreaContent; // نص الـ <textarea>
-
-        // إضافة النص إلى PDF
-        pdf.text(text, 10, 10, {
-            maxWidth: 190, // عرض النص في الصفحة
-            align: 'right', // محاذاة النص لليمين
-            fontSize: 12, // حجم الخط
-            font: 'Amiri', // الخط العربي إذا كان متاحًا
-        });
-
-        pdf.save(`${selectedContrato.title}.pdf`); // حفظ الملف باسم العقد
-    };
-
     return (
         <>
-                <NavBar />
-                <section className="writing">
-                    <Title tit=" نماذج الصيغ القانونية " des=" مجموعة متنوعة من النماذج و الصيغ القانونية " />
-                    
-                    <div className="write-show">
-                        {/* تحقق من وجود البيانات قبل استخدام map */}
-                        {kinds.data && kinds.data[0].buying && kinds.data[0].buying.map((contrato, index) => (
-                            <button key={index} className="btn" onClick={() => handleImageClick(contrato)}>
-                                {contrato.image && <img src={contrato.image} alt={contrato.title} />}
-                                <h1>{contrato.title}</h1>
-                            </button>
-                        ))}
+            <NavBar />
+            <section className="writing">
+                <Title tit=" نماذج الصيغ القانونية " des=" مجموعة متنوعة من النماذج و الصيغ القانونية " />
+
+                <div className="write-show">
+                    {kinds.data && kinds.data[0].buying && kinds.data[0].buying.map((contrato, index) => (
+                        <button key={index} className="btn" onClick={() => handleImageClick(contrato)}>
+                            {contrato.image && <img src={contrato.image} alt={contrato.title} />}
+                            <h1>{contrato.title}</h1>
+                        </button>
+                    ))}
+                </div>
+
+                {isEditing && (
+                    <div className="write-text">
+                        <textarea
+                            value={textAreaContent}
+                            onChange={(e) => setTextAreaContent(e.target.value)}
+                            rows="20"
+                            cols="100"
+                            style={{ direction: "rtl", textAlign: "right" }}
+                        />
+                        <br />
+                        <PDFDownloadLink 
+                            className="btn-click"
+                            document={<PDFDocument textContent={convertToArabicNumbers(textAreaContent)} />} // تحويل الأرقام إلى عربية
+                            fileName={`${selectedContrato ? selectedContrato.title : 'document'}.pdf`}
+                        >
+                            {({ loading }) =>
+                                loading ? 'جاري التحميل...' : 'تحميل PDF'
+                            }
+                        </PDFDownloadLink>
                     </div>
-                    
-                    {isEditing && (
-                        <div className="write-text">
-                            {/* محتوى يتم تحويله إلى PDF */}
-                            <div id="pdf-content" style={{ direction: "rtl", textAlign: "right", fontFamily: "'Amiri', serif" }}>
-                                <textarea
-                                    value={textAreaContent}
-                                    onChange={(e) => setTextAreaContent(e.target.value)}
-                                    rows="20" 
-                                    cols="100"
-                                    style={{ direction: "rtl", textAlign: "right", fontFamily: "'Amiri', serif" }} // إضافة دعم RTL للعربية
-                                />
-                            </div>
-                            <br />
-                            <button className='btn-click' onClick={handlePdfDownload}>تحويل إلى PDF</button>
-                        </div>
-                    )}
-                </section>
-                <Footer />
+                )}
+            </section>
+            <Footer />
         </>
     );
-}
+};
+
+export default Writeing;

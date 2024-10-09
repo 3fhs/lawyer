@@ -41,18 +41,19 @@
   .dropdown .btn-drop {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    position: relative;
+    min-width: 70px;
   }
   .dropdown .btn-drop .bi-caret-up-fill,
   .dropdown .btn-drop .bi-caret-down-fill {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 20px;
+    justify-content: left;
     font-size: 30px;
     cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -15px;
   }
   .dropdown .btn-drop .bi-caret-right-fill,
   .dropdown .btn-drop .bi-caret-left-fill {
@@ -126,27 +127,31 @@
       left: -38px;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 780px) {
     .nav-header {
       position: relative;
     }
+    .all-links {
+      flex-direction: row;
+      align-items: center;
+    }
     .nav-header .bi-x-lg,
     .bi-list {
-        position: absolute;
-        right: 0;
-        background-color: var(--white-color);
-        font-size: 30px;
-        border-radius: 50% 0 0 50%;
-        cursor: pointer;
-        top: 25%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px;
+      position: absolute;
+      right: 0;
+      background-color: var(--white-color);
+      font-size: 30px;
+      border-radius: 50% 0 0 50%;
+      cursor: pointer;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
     }
     .nav-links {
         position: absolute;
-        bottom: -371px;
+        bottom: -342px;
         flex-direction: column;
         border-bottom-left-radius: 5px;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -159,6 +164,7 @@
         padding: 10px 20px;
         border-top: 2px solid var(--light-color);
         border-bottom: 2px solid var(--light-color);
+        border-left: 2px solid var(--light-color);
     }
     .dropdown .btn-drop .bi-caret-up-fill,
     .dropdown .btn-drop .bi-caret-down-fill {
@@ -181,7 +187,7 @@
       border-radius: 0 !important;
     }
     .dropdown .btn-drop {
-      justify-content: end;
+      justify-content: start;
     }
     .dropdown .btn-drop .bi-caret-right-fill,
     .dropdown .btn-drop .bi-caret-left-fill {
@@ -189,17 +195,18 @@
       align-items: center;
       justify-content: center;
       position: absolute;
-      height: 30px;
+      height: 100%;
       cursor: pointer;
-      left: -35px;
+      right: 0;
       font-size: 30px;
+      width: 50%;
     }
     .dropdown .lists-drop  {
       right: 0px;
       width: 100%;
       position: absolute;
-      top: -302px;
-      height: 365px;
+      top: -273px;
+      height: 340px;
       background: var(--danger-color);
       z-index: 15;
       text-align: center;
@@ -207,6 +214,19 @@
       clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
       transition: 0.5s;
       border-radius: 0;
+    }
+    .dropdown .lists-drop .bi-arrow-return-right {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: var(--white-color);
+      padding: 5px;
+      border-radius: 50%;
+      display: flex;
+      color: var(--danger-color);
+      font-size: 25px;
+      font-weight: bold;
+      cursor: pointer;
     }
     .dropdown .lists-drop .list-drop {
       color: var(--white-color);
@@ -240,8 +260,11 @@
       padding: 8px;
     }
   }
-  @media (max-width: 385px) {
+  @media (max-width: 400px) {
     .nav-de {
       display: none;
+    }
+    .dropdown .btn-drop .bi-caret-right-fill, .dropdown .btn-drop .bi-caret-left-fill {
+      width: 100%;
     }
   }

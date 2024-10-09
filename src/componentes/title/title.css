@@ -39,3 +39,15 @@
     bottom: -10px;
     left: 0px;
 }
+.title span {
+    position: absolute;
+    bottom: 12px;
+    right: 50%;
+    transform: translateX(50%);
+    background: var(--light-color);
+    padding: 0px 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    border-top: 2px solid var(--black-color);
+    border-bottom: 2px solid var(--black-color);
+}
