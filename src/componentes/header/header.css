@@ -32,7 +32,7 @@
     border-radius: 50%;
 }
 .section-office .info-office {
-    width: 400px;
+    max-width: 400px;
     padding: 30px 20px;
     text-align: center;
 }
@@ -93,5 +93,10 @@
     }
     .section-office .info-office p {
         font-size: 18px;
+    }
+}
+@media (max-width: 400px) {
+    .section-office {
+        padding: 0;
     }
 }

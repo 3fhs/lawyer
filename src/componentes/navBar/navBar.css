@@ -260,11 +260,22 @@
       padding: 8px;
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 402px) {
     .nav-de {
       display: none;
     }
     .dropdown .btn-drop .bi-caret-right-fill, .dropdown .btn-drop .bi-caret-left-fill {
       width: 100%;
+    }
+    .nav-links {
+      bottom: -372px;
+    }
+  }
+  @media (max-width: 292px) {
+    .nav-links {
+      width: 100%;
+      bottom: -342px;
+      padding: 10px 0;
+      top: 100%;
     }
   }
