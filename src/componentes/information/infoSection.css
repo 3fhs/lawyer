@@ -1,3 +1,6 @@
+.section-help {
+    overflow: hidden;
+}
 .section-help .help-all {
     background: var(--danger-color);
     display: flex;
@@ -6,6 +9,7 @@
     gap: 20px;
     flex-wrap: wrap;
     border-bottom: 2px solid var(--light-color);
+    border-radius: 6px 6px 0 0;
 }
 .help-all .help {
     text-align: center;
@@ -21,10 +25,20 @@
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
+    letter-spacing: 2px;
+    width: fit-content;
+    right: 50%;
+    transform: translateX(50%);
+    position: relative;
+    padding: 5px;
+    border-bottom: 5px solid var(--white-color);
 }
 .help-all .help p {
     font-size: 18px;
     font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    color: #ededed;
 }
 .section-help .whose-help {
     background: var(--danger-color);
@@ -33,16 +47,21 @@
     align-items: center;
     justify-content: space-evenly;
     color: var(--white-color);
+    border-radius: 0 0 6px 6px;
 }
 .whose-help img {
     height: 100%;
     max-width: 400px;
+    border: 2px solid var(--white-color);
+    border-radius: 4px;
 }
 .whose-help .how-help {
     max-width: 400px;
     text-align: center;
-    color: var(--sixth-color);
-    text-shadow: 0 0 10px BLACK;
+    color: var(--white-color);
+    text-shadow: 0 0 5px var(--black-color);
+    letter-spacing: 1px;
+    line-height: 1.6;
 }
 .whose-help .how-help h1 {
     margin-bottom: 20px;

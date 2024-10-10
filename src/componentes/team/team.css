@@ -3,6 +3,7 @@
     background: linear-gradient(90deg, var(--danger-color), var(--black-color) 50%, var(--danger-color));
     border-top: 2px solid var(--light-color);
     border-bottom: 2px solid var(--light-color);
+    overflow: hidden;
 }
 .team .team-title {
     color: white;
@@ -42,11 +43,11 @@
     max-width: 400px;
     text-align: center;
     color: var(--white-color);
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
     border-bottom: 4px solid var(--white-color);
     padding: 0 0 20px;
     position: relative;
+    background: var(--form-color);
+    border-radius: 12px 12px 50% 50%;
 }
 .team-card .card img {
     width: 250px;
