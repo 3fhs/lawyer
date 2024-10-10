@@ -270,11 +270,19 @@
     .dropdown .btn-drop .bi-caret-right-fill, .dropdown .btn-drop .bi-caret-left-fill {
       width: 100%;
     }
+    .dropdown .lists-drop {
+      top: -303px;
+      height: 370px;
+    }
   }
-  @media (max-width: 292px) {
+  @media (max-width: 350px) {
     .nav-links {
       width: 100%;
       bottom: -342px;
       padding: 10px 0;
+    }
+    .dropdown .lists-drop {
+      top: -273px;
+      height: 338px;
     }
   }

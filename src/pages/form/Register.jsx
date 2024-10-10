@@ -8,7 +8,7 @@ export default function Register() {
     <>
     <section className="sec-form">
         <div className="register">
-        <Title tit=" تسجيل الدخول للموقع "/>
+        <Title tit=" تسجيل الدخول للموقع " styleForm={styleForm}/>
             <form>
             <div className="form-control">
                 <input type="text" placeholder=" اسمك " required/>
@@ -29,3 +29,8 @@ export default function Register() {
     </>
   )
 }
+
+const styleForm = {
+    right: "0px",
+    transform: "translateX(0)",
+  }

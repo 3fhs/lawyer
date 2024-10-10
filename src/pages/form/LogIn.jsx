@@ -4,11 +4,12 @@ import Title from '../../componentes/title/Title';
 import { Link } from 'react-router-dom';
 
 export default function LogIn() {
+
   return (
     <>
     <section className="sec-form">
         <div className="login">
-            <Title tit=" تسجيل الدخول للموقع "/>
+            <Title tit=" تسجيل الدخول للموقع " styleForm={styleForm} />
             <form>
             <div className="form-control">
                 <input type="text" placeholder="Username" required/>
@@ -25,4 +26,9 @@ export default function LogIn() {
     </section>
     </>
   )
+}
+
+const styleForm = {
+  right: "0px",
+  transform: "translateX(0)",
 }
