@@ -4,8 +4,7 @@
 }
 .swiper {
     border-radius: 6px;
-    border: 2px solid var(--black-color);
-    box-shadow: 0 0 5px var(--black-color);
+    box-shadow: 0 0 4px 1px #9994;
     overflow: hidden;
 }
 .swiper-slide {
@@ -53,5 +52,12 @@
 @media (max-width: 465px) {
     .testimonial {
         font-size: 12px;
+    }
+    .testimonial {
+        width: 100%;
+        max-width: none;
+    }
+    .swiper-slide img {
+        display: none;
     }
 }

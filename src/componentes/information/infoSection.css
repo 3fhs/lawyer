@@ -15,7 +15,7 @@
     text-align: center;
     color: var(--white-color);
     border-bottom: 2px solid var(--white-color);
-    box-shadow: 0 0 5px var(--black-color);
+    box-shadow: 0 -2px 5px var(--black-color);
     max-width: 300px;
     padding: 10px 20px;
     text-shadow: 0 0 5px var(--black-color);

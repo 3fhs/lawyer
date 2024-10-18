@@ -1,9 +1,9 @@
-import madany from "./image/civil.jpg";
-import mgl from "./image/mglsdawla.webp";
-import fam from "./image/family.jpg";
-import cri from "./image/crimie.webp";
-import com from "./image/company.jpg";
-import ds from "./image/Dstorya.jpg";
+// import madany from "./image/civil.jpg";
+// import mgl from "./image/mglsdawla.webp";
+// import fam from "./image/family.jpg";
+// import cri from "./image/crimie.webp";
+// import com from "./image/company.jpg";
+// import ds from "./image/Dstorya.jpg";
 import ahmed from "./image/lawyerahmed.jpg";
 import women from "./image/ladyes.jpeg";
 import sayed from "./image/lawyer-sayed.jpg";
@@ -12,7 +12,7 @@ const kinds = {
         lawport: [
             {
                 "id": 1,
-                "image": madany,
+                "image": "https://www.essamsalem.com/images/practices/civil%20law.webp",
                 "الاسم": "القانون المدنى",
                 "قسم": "يشمل تنظيم العلاقات بين الأفراد، مثل العقود والالتزامات والمسؤوليات المدنية. يتعامل مع الأضرار المادية والمعنوية، والتعويضات.",
                 "نبذة": {
@@ -23,7 +23,7 @@ const kinds = {
             },
             {
                 "id": 2,
-                "image": cri,
+                "image": "https://jarajrehlaw.com/wp-content/uploads/2022/09/pexels-kindel-media-7714795-1280x853.jpg",
                 "الاسم": "القانون الجنائى",
                 "قسم": "يشمل الجرائم والعقوبات المرتبطة بها. يتعامل مع قضايا مثل القتل ، السرقة، الاحتيال ، الاعتداءات وغيرها من الجرائم.",
                 "نبذة": {
@@ -34,7 +34,7 @@ const kinds = {
             },
             {
                 "id": 3,
-                "image": com,
+                "image": "https://www.esenyelpartners.com/wp-content/uploads/2022/05/Corporate-and-Commercial1.jpg",
                 "الاسم": "القانون التجارى",
                 "قسم": "يختص بتنظيم الأعمال التجارية والشركات . يشمل قضايا مثل تأسيس الشركات ، الإفلاس ، العقود التجارية ، و حماية حقوق الملكية الفكرية.",
                 "نبذة": {
@@ -44,7 +44,7 @@ const kinds = {
             },
             {
                 "id": 4,
-                "image": mgl,
+                "image": "https://img.youm7.com/ArticleImgs/2024/4/1/220903-%D9%85%D8%AC%D9%85%D8%B9-%D9%85%D8%AD%D8%A7%D9%83%D9%85-%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D8%A9.jpg",
                 "الاسم": "القانون الادارى",
                 "قسم": "ينظم العلاقة بين الدولة والأفراد، والقرارات الإدارية الصادرة عن السلطات التنفيذية . يشمل الطعون أمام المحاكم الإدارية.",
                 "نبذة": {
@@ -55,7 +55,7 @@ const kinds = {
             },
             {
                 "id": 5,
-                "image": ds,
+                "image": "https://i0.wp.com/www.asswak-alarab.com/wp-content/uploads/2022/07/w7rknivf300sws8cs.jpg?fit=1200%2C672&ssl=1",
                 "الاسم": "القانون الدستورى",
                 "قسم": "يحدد حقوق و واجبات المواطنين والدولة و يشمل تفسير و تطبيق الدستور . يهتم بالحقوق والحريات العامة ، والفصل بين السلطات.",
                 "نبذة": {
@@ -66,7 +66,7 @@ const kinds = {
             },
             {
                 "id": 6,
-                "image": fam,
+                "image": "https://www.logisticegypt.com/images/2021/10/13/whatsapp-image-2021-10-13-at-4.33.48-pm.jpeg",
                 "الاسم": "قانون الاحوال الشخصية",
                 "قسم": "يتعلق بتنظيم قضايا الأسرة مثل الزواج ، الطلاق ، النفقة ، الحضانة ، و المواريث . يتناول حقوق الزوجة و الأولاد و العلاقات الأسرية بشكل عام.",
                 "نبذة": {

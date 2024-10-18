@@ -9,7 +9,9 @@ export default function Consultations() {
     <>
     <NavBar/>
     <section className="sec-form" >
-      <Title tit=" وجه الينا استشارتك و سيتم الرد لاحقا "/>
+    <Title tit=" وجه الينا استشارتك و سيتم الرد لاحقا "/>
+
+      <div className='consultations-all'>
         <div className="consultations">
           <form className="consultation-form">
             <input type="text" name="name" placeholder="اكتب اسمك هنا" required/>
@@ -19,10 +21,13 @@ export default function Consultations() {
             <input type="number" name="phone" placeholder="رقم الواتس" required/>
             
             <select className="consultation-type" required>
-              <option value="family">قانون الأسرة</option>
-              <option value="business">القانون التجاري</option>
-              <option value="employment">قانون العمل</option>
-              <option value="real-estate">قانون العقارات</option>
+              <option value="family"> قانون الأحوال الشخصية </option>
+              <option value="business"> القانون التجاري </option>
+              <option value="employment"> قانون العمل </option>
+              <option value="real-estate"> القانون المدنى </option>
+              <option value="real-estate"> القانون الجنائى </option>
+              <option value="real-estate"> المخالفات </option>
+              <option value="real-estate"> القانون الادارى </option>
             </select>
             
             <textarea name="details" placeholder="اكتب تفاصيل مشكلتك القانونية" rows="5" required></textarea>
@@ -30,6 +35,18 @@ export default function Consultations() {
             <button className='btn-click' type="submit"> أرسال </button>
           </form>
         </div>
+
+        <div className="buying">
+          <h1> ثمن الاستشارة </h1>
+          <div className="buying-info">
+            <div className="buying-check">
+              <i className="bi bi-check-circle"></i>
+              <span> عليك التسجيل اولا , ثم ملئ الفورم الذى امامك لكى يتم الرد عليك </span>
+            </div>
+            <button> دفع 200 جنيها </button>
+          </div>
+        </div>
+      </div>
     </section>
     <Footer/>
     </>

@@ -27,6 +27,8 @@ export default function Team() {
                         <p> {lawyer.work} </p>
                         <div className='icon'>
                         <i className="bi bi-star-fill"></i>
+                        <i className="bi bi-star-fill"></i>
+                        <i className="bi bi-star-fill"></i>
                         </div>
                     </div>
             ) 

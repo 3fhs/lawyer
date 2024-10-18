@@ -32,18 +32,18 @@
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 4px var(--red-color);
 }
 .law-card .card h2 {
     margin-bottom: 10px;
-    text-shadow: 0 0 5px white;
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
 }
 .law-card .card p {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
+    line-height: 1.6;
 }
 .law-card .card i {
     font-size: 30px;

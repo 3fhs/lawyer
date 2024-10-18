@@ -5,7 +5,6 @@
     transform: translateX(50%);
     text-align: center;
     color: var(--white-color);
-    text-shadow: 0 0 5px var(--black-color);
     margin-bottom: 20px;
     font-size: 30px;
     font-weight: bold;
@@ -16,40 +15,34 @@
     font-size: 35px;
     font-weight: bold;
 }
-.title p {
+.title .div-button {
     padding-bottom: 20px;
     font-size: 20px;
-    border-bottom: 2px solid var(--light-color);
+    border-bottom: 2px solid var(--orange-color);
     position: relative;
 }
-.title p::after,
-.title p::before {
+.title .la,
+.title .wy,
+.title .er {
+    color: var(--black-color);
     position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: var(--light-color);
-    border-radius: 50%;
-}
-.title p::after {
-    bottom: -10px;
-    right: 0px;
-}
-.title p::before {
-    bottom: -10px;
-    left: 0px;
-}
-.title span {
-    position: absolute;
-    bottom: 12px;
-    right: 50%;
-    transform: translateX(50%);
-    background: var(--light-color);
+    background: var(--orange-color);
     padding: 0px 10px;
     border-radius: 50%;
     font-size: 18px;
-    border-top: 2px solid var(--black-color);
-    border-bottom: 2px solid var(--black-color);
+    display: flex;
+    align-items: center;
+    bottom: -18px;
+}
+.title .la {
+    left: 0;
+}
+.title .wy {
+    right: 50%;
+    transform: translateX(50%);
+}
+.title .er {
+    right: 0;
 }
 @media (max-width: 400px) {
     .title {

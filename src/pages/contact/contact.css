@@ -12,10 +12,10 @@
     min-height: 50vh;
     flex-direction: column;
     gap: 20px;
-    box-shadow: 0 0 10px var(--white-color);
+    box-shadow: 0 0 2px var(--black-color);
     padding: 20px;
     border-radius: 12px;
-    background-color: var(--form-color);
+    backdrop-filter: blur(50px);
     letter-spacing: 1px;
 }
 .contact-me form label {

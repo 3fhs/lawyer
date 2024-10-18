@@ -23,13 +23,15 @@ export default function AnyLaw() {
             <section>
                 <Title tit="عن هذا القانون" des="نبذة عن هذا القسم من القانون" />
                 <div className='any-law'>
-                    <img src={selection.image} alt={selection.الاسم} />
                     <div className="any-law-info">
                         <h1> {selection.الاسم} </h1>
-                        <p> {selection.قسم} </p>
-                        <span> {selection.نبذة.اولى} </span>
-                        <span> {selection.نبذة.الثانية} </span>
-                        <span> {selection.نبذة.الثالثة} </span>
+                        <p>- {selection.قسم} </p>
+                        <div className='center-info'>
+                            <img src={selection.image} alt={selection.الاسم} />
+                            <span>- {selection.نبذة.اولى} </span>
+                        </div>
+                        <span>- {selection.نبذة.الثانية} </span>
+                        <span>- {selection.نبذة.الثالثة} </span>
                     </div>
                 </div>
             </section>
