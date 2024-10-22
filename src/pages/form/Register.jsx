@@ -8,7 +8,7 @@ export default function Register() {
     <>
     <section className="sec-form">
         <div className="register">
-        <Title tit=" تسجيل الدخول للموقع " styleForm={styleForm}/>
+        <Title tit=" انشاء حساب داخل الموقع " styleForm={styleForm}/>
             <form>
             <div className="form-control">
                 <input type="text" placeholder=" اسمك " required/>

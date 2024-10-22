@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,29 +24,6 @@ body {
   font-family: "Amiri", serif;
   direction: rtl;
 }
-.amiri-regular {
-  font-family: "Amiri", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.amiri-bold {
-  font-family: "Amiri", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.amiri-regular-italic {
-  font-family: "Amiri", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.amiri-bold-italic {
-  font-family: "Amiri", serif;
-  font-weight: 700;
-  font-style: italic;
-}
 
 ul {
   list-style: none;
@@ -65,7 +44,7 @@ section {
   padding: 10px 20px;
   font-size: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 5px var(--black-color);
+  box-shadow: 0 0 2px var(--white-color);
   background: var(--danger-color);
   color: var(--white-color);
   outline: none;
@@ -78,7 +57,6 @@ section {
 }
 .btn-click:hover {
   background-color: var(--red-color);
-  color: var(--black-color);
 }
 .sec-form {
   background-image: url("./image/back-contact.jpg");

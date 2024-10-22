@@ -4,9 +4,12 @@
 // import cri from "./image/crimie.webp";
 // import com from "./image/company.jpg";
 // import ds from "./image/Dstorya.jpg";
-import ahmed from "./image/lawyerahmed.jpg";
-import women from "./image/ladyes.jpeg";
-import sayed from "./image/lawyer-sayed.jpg";
+import togo from "./image/togomory-lawyer.jpg";
+import kisaky from "./image/kisaky-girls-lawyer.png";
+import ran from "./image/ran_mouri_girl-lawyer.jpg";
+import conan from "./image/senshy-lawyer.jpg";
+import ahmed from "./image/testi-man.webp";
+import amina from "./image/testi-girl.webp";
 
 const kinds = {
         lawport: [
@@ -79,7 +82,7 @@ const kinds = {
             {
                 "id": 1,
                 "name": " احمد عبد اللطيف ",
-                "image": ahmed,
+                "image": conan,
                 "work": " محامى ",
                 "مقيد": "استئناف عالى",
                 "شهاداته": {
@@ -95,7 +98,7 @@ const kinds = {
             {
                 "id": 2,
                 "name": " سيد حسن عباس ",
-                "image": sayed,
+                "image": togo,
                 "work": " محامى ",
                 "مقيد": "استئناف عالى",
                 "شهاداته": {
@@ -111,7 +114,7 @@ const kinds = {
             {
                 "id": 3,
                 "name": " امال ذكى محمد ",
-                "image": women,
+                "image": kisaky,
                 "work": " محامية ",
                 "مقيد": "استئناف عالى",
                 "شهاداته": {
@@ -127,7 +130,7 @@ const kinds = {
             {
                 "id": 4,
                 "name": " ساره سعيد خليل ",
-                "image": women,
+                "image": ran,
                 "work": " محامية ",
                 "مقيد": "استئناف عالى",
                 "شهاداته": {
@@ -151,7 +154,7 @@ const kinds = {
             },
             {
                 "id": 2,
-                "image": women,
+                "image": amina,
                 "talk": " حابة اشكر الجميع على مساعدتهم ليا جبولى حقوقى الحمد لله بعد مكنت خلاص و نزلو نفذو و محترمين ",
                 "name": " سعاد رشاد ",
                 "work": " ربة منزل ",

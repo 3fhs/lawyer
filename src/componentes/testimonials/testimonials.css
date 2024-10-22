@@ -20,8 +20,8 @@
 .swiper-slide img {
     width: 50%;
     height: 300px;
-    object-fit: cover;
-    object-position: top;
+    object-fit: fill;
+    object-position: center;
 }
 .testimonial {
     max-width: 50%;

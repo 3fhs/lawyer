@@ -27,7 +27,9 @@ export default function AnyLaw() {
                         <h1> {selection.الاسم} </h1>
                         <p>- {selection.قسم} </p>
                         <div className='center-info'>
-                            <img src={selection.image} alt={selection.الاسم} />
+                            <div className='img-cont'>
+                                <img src={selection.image} alt={selection.الاسم} />
+                            </div>
                             <span>- {selection.نبذة.اولى} </span>
                         </div>
                         <span>- {selection.نبذة.الثانية} </span>
