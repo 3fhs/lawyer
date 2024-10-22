@@ -97,6 +97,10 @@
       color: var(--danger-color);
       cursor: pointer;
       height: 36px;
+      width: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
   .nav-links li, 
   .nav-links a {
@@ -171,7 +175,6 @@
         background: var(--white-color);
         right: 0;
         padding: 10px 20px;
-        border-top: 2px solid var(--light-color);
         border-bottom: 2px solid var(--light-color);
         border-left: 2px solid var(--light-color);
     }

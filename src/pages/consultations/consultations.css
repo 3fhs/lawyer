@@ -12,9 +12,11 @@
 }
 .consultations-all .buying {
     backdrop-filter: blur(50px);
-    box-shadow: 0 0 4px var(--black-color);
+    box-shadow: 0 0 2px var(--white-color);
     padding: 10px 20px;
     border-radius: 6px;
+    max-width: 500px;
+    width: 100%;
 }
 .buying h1 {
     font-size: 20px;
@@ -70,10 +72,11 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px 10px;
-    backdrop-filter: blur(50px);
-    box-shadow: 0 0 4px var(--black-color);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 2px var(--white-color);
     border-radius: 12px;
-    max-width: 500px;
+    max-width: 800px;
+    flex-grow: 1;
 }
 .consultation-form input {
     height: 50px;
@@ -81,10 +84,10 @@
     outline: none;
     padding: 10px;
     color: var(--black-color);
-    border: 3px solid var(--black-color);
+    border: 3px solid transparent;
     width: 100%;
+    flex-grow: 1;
     transition: 0.3s;
-    max-width: 500px;
 }
 .consultation-form input:focus {
     border-bottom: 3px solid var(--danger-color);
@@ -94,7 +97,7 @@
     outline: none;
     height: 50px;
     width: 100%;
-    max-width: 400px;
+    flex-grow: 1;
     text-align: center;
     border-radius: 6px;
     padding: 10px 20px;
@@ -113,7 +116,7 @@
     line-height: 2;
     resize: none;
     width: 100%;
-    max-width: 500px;
+    flex-grow: 1;
     outline: none;
     color: var(--black-color);
     padding: 10px 20px;
@@ -121,11 +124,11 @@
     border-radius: 6px;
     overflow: scroll;
     transition: 0.3s;
-    border: 2px solid var(--black-color);
 }
 
 @media (max-width: 768px) {
     .consultations-all {
         flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
 }

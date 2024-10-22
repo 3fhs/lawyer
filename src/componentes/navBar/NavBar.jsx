@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from '../../image/lawyer-logo-two.webp';
 import './navBar.css';
 import NavLinks from './NavLinks';
+import NavLinksTop from './NavLinksTop';
 
 
 export default function NavBar() {
@@ -16,11 +17,8 @@ export default function NavBar() {
         <div className='nav-header'>
         {openList ?  <i className="bi bi-x-lg" onClick={() => {setOpenList(false) ; setOPenDrop(false)}} ></i> : <i className="bi bi-list" onClick={() => setOpenList(true)} ></i>}
           <div className='all-links'>
-            <ul className='nav-de'>
-              <li> <i className="bi bi-telephone"></i>  01010481061 </li>
-              <li> <i className="bi bi-envelope"></i> mohamed@gmail.com </li>
-              <li> <i className="bi bi-geo-alt"></i> شارع شبرا الدور الاول شقة 1002 </li>
-            </ul>
+
+            <NavLinksTop/>
 
             <NavLinks setOPenDrop={setOPenDrop} setOpenList={setOpenList} openDrop={openDrop}  openList={openList}/>
 

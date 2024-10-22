@@ -4,12 +4,15 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
+    background-image: linear-gradient(-45deg, var(--danger-color), var(--black-color), var(--red-color), var(--black-color), var(--danger-color));
+    border-radius: 60px 10px 50px 10px;
+    margin: 10px;
 }
 .we-are .logo-office {
-    height: 50vh;
+    max-height: 400px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 0 10px var(--black-color);
+    padding: 20px;
 }
 .we-are-info {
     max-width: 500px;
