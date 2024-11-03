@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './footer.css';
 import logo from '../../image/lawyer-logo-two.webp';
+import { useDispatch, useSelector } from 'react-redux';
+import { infoApiFetch } from '../../redux/apiCalls/infoApiCall';
 
 export default function Footer() {
+
+    const dispatch = useDispatch();
+    const {information} = useSelector(state => state.info)
+
+    useEffect(() => {
+        dispatch(infoApiFetch())
+    }, [dispatch])
+
   return (
     <div className='footer'>
         <div className="footer-count">
@@ -21,17 +31,17 @@ export default function Footer() {
                 <li> 
                     <i className="bi bi-envelope"></i>
                     <h3>: Email</h3> 
-                    <p>mohamed@gmail.com </p>
+                    <p> {information.email} </p>
                 </li>
                 <li> 
                     <i className="bi bi-telephone"></i> 
                     <h3>: Phone</h3> 
-                    <p>020 / 012345678910</p>
+                    <p> {information.phone} </p>
                 </li>
                 <li> 
                     <i className="bi bi-geo-alt"></i>
                     <h3>: Our Office</h3> 
-                    <p> شارع شبرا الدور الاول شقة 1002 </p>
+                    <p> {information.address} </p>
                 </li>
             </ul>
             </div>

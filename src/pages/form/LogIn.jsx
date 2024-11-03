@@ -2,12 +2,16 @@ import React from 'react';
 import "./form.css";
 import Title from '../../componentes/title/Title';
 import { Link } from 'react-router-dom';
+import logo from "../../image/lawyer-logo-two.webp";
 
 export default function LogIn() {
 
   return (
     <>
     <section className="sec-form">
+        <Link className='go-to-home' to="/">
+          <img src={logo} alt='go to home'/>
+        </Link>
         <div className="login">
             <Title tit=" تسجيل الدخول للموقع " styleForm={styleForm} />
             <form>

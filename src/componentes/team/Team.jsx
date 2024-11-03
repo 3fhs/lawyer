@@ -26,9 +26,9 @@ export default function Team() {
                         <h2> أ / {lawyer.name} </h2>
                         <p> {lawyer.work} </p>
                         <div className='icon'>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
+                          <i className="bi bi-star-fill"></i>
+                          <i className="bi bi-star-fill"></i>
+                          <i className="bi bi-star-fill"></i>
                         </div>
                     </div>
             ) 

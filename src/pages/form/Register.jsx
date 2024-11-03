@@ -1,5 +1,6 @@
 import React from 'react';
 import "./form.css";
+import logo from "../../image/lawyer-logo-two.webp";
 import Title from '../../componentes/title/Title';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +8,9 @@ export default function Register() {
   return (
     <>
     <section className="sec-form">
+        <Link className='go-to-home' to="/">
+          <img src={logo} alt='go to home'/>
+        </Link>
         <div className="register">
         <Title tit=" انشاء حساب داخل الموقع " styleForm={styleForm}/>
             <form>

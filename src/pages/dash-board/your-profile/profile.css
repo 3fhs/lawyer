@@ -1,0 +1,138 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background: #9994;
+    padding: 2px 5px;
+    border-radius: 6px;
+}
+.profile h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 5px 0;
+}
+.profile form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 0 2px 1px #9994;
+    border-radius: 6px;
+    padding: 10px;
+    background: #9992;
+}
+.profile .profile-office,
+.profile .profile-address {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: stretch;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    gap: 20px;
+}
+.profile .education {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-top: 2px solid #999;
+}
+.profile .co-index {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.profile .co-text ,
+.profile .todo {
+    width: 48%;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.profile .todo {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+.profile .todo .todo-list {
+    width: 100%;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    background-color: #9994;
+    padding: 10px;
+    border-radius: 6px;
+    gap: 10px;
+    min-height: 100px;
+}
+.profile .todo .todo-list li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-bottom: 2px;
+    width: 100%;
+}
+.profile .todo .todo-list li:not(:last-child) {
+    border-bottom: 1px solid #1f9999;
+}
+.profile .co-index label {
+    font-size: 18px;
+    font-weight: bold;
+}
+.profile .co-index input {
+    display: flex;
+    flex-grow: 1;
+    height: 40px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 0 0 3px 1px #999;
+    color: #777;
+    padding: 5px;
+    width: 100%;
+    max-width: 350px;
+    text-align: right;
+    background: #222;
+}
+.profile .co-index textarea {
+    flex-grow: 1;
+    min-height: 200px;
+    border-radius: 4px;
+    outline: none;
+    padding: 5px;
+    color: #777;
+    box-shadow: 0 0 2px 1px #999;
+    resize: none;
+    width: 100%;
+    overflow: scroll;
+    text-align: right; 
+    background: #222;   
+}
+.profile form button {
+    background-color: #1f9fff;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border: none;
+    box-shadow: none;
+    width: 70%;
+    border-radius: 6px;
+    position: relative;
+    right: -50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    min-width: 200px;
+}
+.profile form button:hover {
+    background-color: #1f9999;
+}

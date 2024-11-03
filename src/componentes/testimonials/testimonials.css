@@ -28,6 +28,7 @@
     text-align: center;
     padding: 20px;
     color: white;
+    min-height: 300px;
     position: relative;
 }
 .testimonial h2 {
@@ -37,17 +38,47 @@
 }
 .testi {
     position: absolute;
-    bottom: -80px;
-    right: 15px;
+    bottom: 25px;
+    left: 25px;
 }
 /* تغيير أزرار التنقل */
 .swiper-button-next,
 .swiper-button-prev {
     color: var(--white-color); /* تغيير لون الأزرار */
 }
+.swiper-rtl .swiper-button-next {
+    left: 3px;
+    background-color: var(--danger-color);
+    padding: 35px 20px;
+    border-radius: 6px;
+}
+.swiper-rtl .swiper-button-prev {
+    right: 3px;
+    background-color: var(--danger-color);
+    padding: 35px 20px;
+    border-radius: 6px;
+}
 /* تغيير النقاط */
 .swiper-pagination-bullet {
     background: var(--black-color); /* تغيير لون النقاط */
+}
+.add-testimonials {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--danger-color);
+    border-radius: 4px;
+    box-shadow: 0 0 2px 1px #9994;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.add-testimonials h1 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
 }
 @media (max-width: 465px) {
     .testimonial {

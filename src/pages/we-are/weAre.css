@@ -5,19 +5,20 @@
     gap: 20px;
     justify-content: space-evenly;
     background-image: linear-gradient(-45deg, var(--danger-color), var(--black-color), var(--red-color), var(--black-color), var(--danger-color));
-    border-radius: 60px 10px 50px 10px;
+    border-radius: 12px;
     margin: 10px;
 }
 .we-are .logo-office {
-    max-height: 400px;
+    max-height: 350px;
     object-fit: cover;
-    border-radius: 12px;
-    padding: 20px;
+    padding: 16px;
+    border-radius: 50% 50% 10px 10px;
+    border: 2px solid #9994;
+    box-shadow: inset 0 0 35px 12px #012
 }
 .we-are-info {
     max-width: 500px;
     padding: 20px 10px;
-    text-align: center;
     line-height: 2;
 }
 .we-are-info h1 {
@@ -25,12 +26,19 @@
     font-weight: bold;
     text-shadow: 0 0 2px BLACK;
     color: var(--white-color);
-    margin-bottom: 20px;
+    margin: 15px 0;
 }
-.we-are-info p {
+.we-are-info .paragraf {
     color: var(--white-color);
     font-size: 18px;
     letter-spacing: 0.5px;
+}
+.we-are-info .paragraf span {
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 2px solid #fff;
+    background-color: #fff2;
 }
 .we-are-info ul {
     list-style: disc;
@@ -42,9 +50,27 @@
     gap: 20px;
     font-size: 18px;
 }
-@media (max-width: 400px) {
+.contact-about {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: start;
+    color: #999;
+}
+.contact-about span {
+    border-left: 2px solid var(--white-color);
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #fff2;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 0 1px #fff;
+}
+/* @media (max-width: 400px) {
     .we-are .logo-office {
         height: 100%;
         width: 100%;
     }
-}
+} */

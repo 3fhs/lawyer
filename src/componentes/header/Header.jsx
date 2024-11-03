@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './header.css';
 import logo from '../../image/lawyer-logo-two.webp';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { infoApiFetch } from '../../redux/apiCalls/infoApiCall';
 
 export default function Header() {
+
+    const dispatch = useDispatch();
+    const {information} = useSelector(state => state.info)
+
+    useEffect(() => {
+        dispatch(infoApiFetch());
+    }, [dispatch])
+
   return (
     <div className='header'>
         <div className='container'>
             <div className='section-office'>
                 <div className='info-office'>
-                    <h1> <strong> مكتب الاستاذ / </strong> محمد عبد الغنى حسين </h1>
-                    <p> المكتب متخصص فى اعمال المحاماه , و الاجراءات القانونية المختلفة , كما نعمل على تخليص جميع المستندات من كافة المصالح و الهيئات المختلفة , كما تستطيع التواصل معنا للاستشارات القانونية المختلفة </p>
+                    <h1> {information.office} </h1>
+                    <p> {information.about} </p>
                     <button className='btn-click'><Link to="/contact"> تواصل معنا </Link></button>
                 </div>
                 <img src={logo} alt='logo-office' className='logo-office'/>

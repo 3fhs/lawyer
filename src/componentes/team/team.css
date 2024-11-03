@@ -33,15 +33,20 @@
 .team .team-card .icon {
     position: absolute;
     color: var(--light-color);
-    right: 0;
-    transform: translateX(-50%);
+    right: 20px;
+    transform: skew(36deg, -45deg);
     z-index: 5;
     font-size: 16px;
     text-shadow: 0 0 10px var(--danger-color);
-    top: 10px;
+    top: -8px;
+    justify-content: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 2px;
+    background: var(--light-color);
+    height: 100px;
+    border-radius: 20px;
 }
 .team-card .card {
     max-width: 400px;
@@ -52,6 +57,8 @@
     position: relative;
     background: var(--form-color);
     border-radius: 12px 12px 0 0;
+    box-shadow: 0 0 2px var(--white-color);
+    overflow: hidden;
 }
 .team-card .card img {
     width: 250px;

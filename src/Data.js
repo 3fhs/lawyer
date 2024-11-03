@@ -1,9 +1,3 @@
-// import madany from "./image/civil.jpg";
-// import mgl from "./image/mglsdawla.webp";
-// import fam from "./image/family.jpg";
-// import cri from "./image/crimie.webp";
-// import com from "./image/company.jpg";
-// import ds from "./image/Dstorya.jpg";
 import togo from "./image/togomory-lawyer.jpg";
 import kisaky from "./image/kisaky-girls-lawyer.png";
 import ran from "./image/ran_mouri_girl-lawyer.jpg";

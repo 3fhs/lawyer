@@ -4,11 +4,11 @@
     position: relative;
 }
 .law-card {
-    display: flex;
+    display: grid;
     align-items: start;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 .law-card .card {
     width: 300px;
@@ -22,10 +22,7 @@
     letter-spacing: 1px;
     padding-bottom: 40px;
     backdrop-filter: blur(120px);
-    box-shadow: 0 0 5px var(--red-color);
-}
-.law-card .card:hover {
-    transform: scale(1.1);
+    box-shadow: 0 0 8px 2px #1119;
 }
 .law-card .card img {
     width: 100%;

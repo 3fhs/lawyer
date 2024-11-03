@@ -1,4 +1,5 @@
 import React from 'react';
+import AddIcon from '@mui/icons-material/Add';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import Swiper core and required modules
@@ -17,6 +18,10 @@ function Testimonials() {
   return (
     <div className='testimonials'>
       <Title tit=" اراء بعض العملاء الخاصين بنا " des=" نسعى دائما للتطور و نجتهد للوصول بخدماتنا الى المستوى المرجو منها " />
+        <div className='add-testimonials'>
+          <h1> إضافة تعليق </h1>
+          <AddIcon sx={{color:"#fff", cursor:"pointer"}}/>
+        </div>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}

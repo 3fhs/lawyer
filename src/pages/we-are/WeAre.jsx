@@ -1,28 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./weAre.css";
 import NavBar from '../../componentes/navBar/NavBar';
 import Footer from '../../componentes/footer/Footer';
-import logo from '../../image/lawyer-logo-two.webp';
 import Title from '../../componentes/title/Title';
+import { useDispatch, useSelector } from 'react-redux';
+import { infoApiFetch } from '../../redux/apiCalls/infoApiCall';
 
 export default function WeAre() {
+
+  const dispatch = useDispatch();
+  const {information} = useSelector(state => state.info)
+
+  useEffect(() => {
+    dispatch(infoApiFetch())
+  }, [dispatch])
+
   return (
     <div>
         <NavBar/>
         <section>
           <Title tit="مكتب الاستاذ / محمد عبد الغنى حسين" des="اتشرف و مكتبى بتقديم الخدمات القانونية فى كافة اعمال المحاماه"/>
             <div className="we-are">
-              <img src={logo} alt="logo office" className='logo-office'/>
               <div className="we-are-info">
-                <h1> <strong> مكتب الاستاذ / </strong> محمد عبد الغنى حسين </h1>
-                <p> المكتب متخصص فى اعمال المحاماه , و الاجراءات القانونية المختلفة 
-                  , كما نعمل على تخليص جميع المستندات من كافة المصالح و الهيئات المختلفة 
-                  , كما تستطيع التواصل معنا للاستشارات القانونية المختلفة 
-                </p>
+                <img src={information.photo} alt={information.office} className='logo-office'/>
+                <h1> {information.office} </h1>
+                <div className='contact-about'>
+                  <span> الايميل : {information.email} </span>
+                  <span> العنوان : {information.address} </span>
+                  <span> التليفون : {information.phone} </span>
+                </div>
+              </div>
+
+              <div className="we-are-info">
+                <div className='paragraf'> 
+                  <p>{information.about} .</p>
+                  
+                  <span>  نستعرض فيما يلى الشهادات و الخبرات :- </span> 
+                </div>
                 <ul> 
-                  <li> حاصل على ليسانس الحقزق من جامعة عين شمس </li>
-                  <li> تدرب فى مكاتب عديدة </li>
-                  <li> عمل فى مختلف المجالات القانونية </li>
+                  {information.education.map(list => 
+                    <li> {list} </li>
+                  )}
                 </ul>
               </div>
             </div>

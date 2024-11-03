@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
-import './kindslaw.css';
+import './report.css';
 import kinds from '../../Data';
 import { Link } from 'react-router-dom';
 import Title from '../title/Title';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // استيراد ملفات CSS الخاصة بـ AOS
 
-function KindsLaw() {
+function ReportSection() {
 
   useEffect(() => {
     AOS.init({
@@ -16,7 +16,7 @@ function KindsLaw() {
 
   return (
     <section className='law'>
-      <Title tit=" الاقسام القانونية " des=" الاقسام القانونية التى يعمل عليها مكتبنا و نقدم خدماتها بكفاءة مهنية عالية "/>
+      <Title tit=" التقارير و الابحاث و النماذج " des=" بعض التقارير و الابحاث و النماذج "/>
         <div className='law-card'>
             {kinds.lawport.map(law => (
                     <div className='card' key={law.id} data-aos="fade-up">
@@ -32,4 +32,4 @@ function KindsLaw() {
   )
 }
 
-export default KindsLaw
+export default ReportSection;
