@@ -82,9 +82,7 @@ const AppBar = styled(MuiAppBar, {
 function DashNavTop({handleDrawerOpen, open , theme, setMode, info}) {
 
   return (
-    <AppBar position="fixed" 
-// @ts-ignore
-    open={open}>
+    <AppBar position="fixed" open={open}>
         <Toolbar>
         <IconButton
             color="inherit"
