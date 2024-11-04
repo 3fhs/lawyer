@@ -1,32 +1,47 @@
-.we-are {
+.logo-office {
+    max-height: 300px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 50%;
+    padding-bottom: 0;
+}
+.about-image {
+    width: 100%;
+    box-shadow: inset 0 0 35px 12px #012;
+    background-color: #0129;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    padding: 0;
+    gap: 5px;
+    margin: 20px 10px;
+    border-bottom: none;
+    align-items: center;
     justify-content: space-evenly;
-    background-image: linear-gradient(-45deg, var(--danger-color), var(--black-color), var(--red-color), var(--black-color), var(--danger-color));
-    border-radius: 12px;
-    margin: 10px;
 }
-.we-are .logo-office {
-    max-height: 350px;
-    object-fit: cover;
-    padding: 16px;
-    border-radius: 50% 50% 10px 10px;
-    border: 2px solid #9994;
-    box-shadow: inset 0 0 35px 12px #012
-}
-.we-are-info {
-    max-width: 500px;
-    padding: 20px 10px;
-    line-height: 2;
-}
-.we-are-info h1 {
+.about-image h1 {
     font-size: 25px;
     font-weight: bold;
     text-shadow: 0 0 2px BLACK;
     color: var(--white-color);
     margin: 15px 0;
+    text-align: center;
+}
+.about {
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.we-are-info {
+    max-width: 500px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 .we-are-info .paragraf {
     color: var(--white-color);
@@ -56,21 +71,11 @@
     gap: 10px;
     font-size: 18px;
     flex-wrap: wrap;
-    justify-content: start;
-    color: #999;
+    justify-content: center;
+    color: #fff9;
+    padding-bottom: 25px;
 }
 .contact-about span {
-    border-left: 2px solid var(--white-color);
-    padding: 5px;
-    margin-bottom: 5px;
-    background-color: #fff2;
-    border-radius: 4px;
-    color: #fff;
-    box-shadow: 0 0 1px #fff;
+    border-bottom: 2px solid var(--white-color);
+    padding-bottom: 5px;
 }
-/* @media (max-width: 400px) {
-    .we-are .logo-office {
-        height: 100%;
-        width: 100%;
-    }
-} */

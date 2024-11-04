@@ -46,8 +46,8 @@ export default function DashBoard() {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Box sx={{ display: 'flex', direction:'ltr' }}>
-        <CssBaseline />
 
         <DashNavTop info={information} handleDrawerOpen={handleDrawerOpen} open={open} theme={theme} setMode={setMode} />
 
@@ -58,6 +58,7 @@ export default function DashBoard() {
           <DrawerHeader />
           <Outlet/>
         </Box>
+        
       </Box>
     </ThemeProvider>
   );

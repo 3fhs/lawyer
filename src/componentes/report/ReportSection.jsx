@@ -20,7 +20,7 @@ function ReportSection() {
         <div className='law-card'>
             {kinds.lawport.map(law => (
                     <div className='card' key={law.id} data-aos="fade-up">
-                        <img src={law.image} alt='logo-icon'/>
+                        <img src={law.image} alt='logo-section'/>
                         <h2> {law.الاسم} </h2>
                         <p> {law.قسم} </p>
                         <Link to={`/port/${law.id}`}><i className="bi bi-arrow-right"></i></Link>
