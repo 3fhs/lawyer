@@ -55,6 +55,7 @@ const LoginControl = () => {
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
       />
     </Paper>
   );

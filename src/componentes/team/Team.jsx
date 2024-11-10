@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import './team.css';
-import kinds from '../../Data';
 import { Link } from 'react-router-dom';
 import Title from "../title/Title";
 import AOS from 'aos';

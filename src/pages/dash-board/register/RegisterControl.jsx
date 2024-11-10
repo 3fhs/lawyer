@@ -57,6 +57,7 @@ const RegisterControl = () => {
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
       />
     </Paper>
   );
