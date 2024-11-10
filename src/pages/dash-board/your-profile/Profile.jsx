@@ -168,7 +168,7 @@ function Profile() {
                 value={formData.newEducation}
                 onChange={handleEducationChange}
               />
-              <AddIcon sx={{ color: "#1f9fff", cursor: "pointer" , margin:'10px'}} onClick={addEducation} />
+              <AddIcon sx={{ color: "#1f9fff", cursor: "pointer" , margin:'10px', borderRadius: '50%', border: '3px solid #1f9fff', background: '#222222', fontSize:'30px'}} onClick={addEducation} />
             </div>
 
             <ul className='todo-list'>

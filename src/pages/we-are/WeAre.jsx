@@ -18,7 +18,7 @@ export default function WeAre() {
   return (
     <div>
         <NavBar/>
-        <section>
+        <section className='sec-form'>
           <Title tit="مكتب الاستاذ / محمد عبد الغنى حسين" des="اتشرف و مكتبى بتقديم الخدمات القانونية فى كافة اعمال المحاماه"/>        
               <div className="about-image">
                 <div className='about'>
@@ -40,8 +40,8 @@ export default function WeAre() {
                     <span>  نستعرض فيما يلى الشهادات و الخبرات :- </span> 
                   </div>
                   <ul> 
-                    {information.education.map(list => 
-                      <li> {list} </li>
+                    {information.education.map((list, index) => 
+                      <li key={index}> {list} </li>
                     )}
                   </ul>
                 </div>

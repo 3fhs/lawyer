@@ -20,7 +20,7 @@ export default function Consultations() {
   return (
     <>
       <NavBar/>
-        <section className="sec-form" >
+        <section className="sec-section" >
           <Title tit=" وجه الينا استشارتك و سيتم الرد لاحقا "/>
 
           <div className='consultations-all'>

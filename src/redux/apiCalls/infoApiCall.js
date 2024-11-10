@@ -41,7 +41,7 @@ export function infoApiUpdate(data) {
         }
     };
 }
-
+//update before update information
 export const uploadImageToCloudinary = async (file) => {
     const formData = new FormData();
     formData.append('file', file);

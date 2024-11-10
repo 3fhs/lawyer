@@ -2,16 +2,15 @@ import React from 'react';
 import "./form.css";
 import Title from '../../componentes/title/Title';
 import { Link } from 'react-router-dom';
-import logo from "../../image/lawyer-logo-two.webp";
+import NavBar from '../../componentes/navBar/NavBar';
+import Footer from '../../componentes/footer/Footer';
 
 export default function LogIn() {
 
   return (
     <>
+    <NavBar/>
     <section className="sec-form">
-        <Link className='go-to-home' to="/">
-          <img src={logo} alt='go to home'/>
-        </Link>
         <div className="login">
             <Title tit=" تسجيل الدخول للموقع " styleForm={styleForm} />
             <form>
@@ -28,6 +27,7 @@ export default function LogIn() {
             </div>
         </div>
     </section>
+    <Footer/>
     </>
   )
 }

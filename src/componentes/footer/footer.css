@@ -21,7 +21,6 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--white-color);
     transform: translateX(50%);
     right: 50%;
     position: relative;
@@ -92,7 +91,7 @@
 .footer-addres li i {
     font-size: 30px;
     background-color: white;
-    color: var(--danger-color);
+    color: var(--black-color);
     padding: 10px;
     border-radius: 50%;
     width: 50px;

@@ -15,7 +15,7 @@ export default function Header() {
     }, [dispatch])
 
   return (
-    <div className='header'>
+    <div className='header sec-section'>
         <div className='container'>
             <div className='section-office'>
                 <div className='info-office'>
@@ -26,12 +26,14 @@ export default function Header() {
                 <img src={logo} alt='logo-office' className='logo-office'/>
             </div>
             <div className='info'>
-                <div className='info-name'>
-                    <h3> مكتبنا خبرة لاكثر من 30 عاما فى مجال المحاماه  </h3>
-                </div>
-                <div className='info-name'>
-                    <h3> أ / محمد عبد الغنى </h3>
-                    <p> المحامى </p>
+                <div className='info-count'>                    
+                    <div className='info-name'>
+                        <h3> مكتبنا خبرة لاكثر من 30 عاما فى مجال المحاماه  </h3>
+                    </div>
+                    <div className='info-name'>
+                        <h3> أ / محمد عبد الغنى </h3>
+                        <p> المحامى </p>
+                    </div>
                 </div>
             </div>
         </div>

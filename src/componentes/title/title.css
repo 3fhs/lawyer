@@ -4,11 +4,12 @@
     right: 50%;
     transform: translateX(50%);
     text-align: center;
-    color: var(--white-color);
+    color: var(--orange-color);
+    text-shadow: 0 0 2px black;
     margin-bottom: 20px;
     font-size: 30px;
     font-weight: bold;
-    max-width: 500px;
+    width: fit-content;
     line-height: 2;
 }
 .title h1 {
@@ -17,8 +18,8 @@
 }
 .title .div-button {
     padding-bottom: 20px;
-    font-size: 20px;
-    border-bottom: 2px solid var(--orange-color);
+    font-size: 35px;
+    border-bottom: 5px solid var(--orange-color);
     position: relative;
 }
 .title .la,
@@ -29,10 +30,15 @@
     background: var(--orange-color);
     padding: 0px 10px;
     border-radius: 50%;
-    font-size: 18px;
+    z-index: 5;
+    font-size: 13px;
+    font-weight: 100;
     display: flex;
     align-items: center;
-    bottom: -18px;
+    justify-content: center;
+    bottom: -15px;
+    width: 25px;
+    height: 25px;
 }
 .title .la {
     left: 0;

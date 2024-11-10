@@ -1,16 +1,15 @@
 import React from 'react';
 import "./form.css";
-import logo from "../../image/lawyer-logo-two.webp";
 import Title from '../../componentes/title/Title';
 import { Link } from 'react-router-dom';
+import NavBar from '../../componentes/navBar/NavBar';
+import Footer from '../../componentes/footer/Footer';
 
 export default function Register() {
   return (
     <>
+    <NavBar/>
     <section className="sec-form">
-        <Link className='go-to-home' to="/">
-          <img src={logo} alt='go to home'/>
-        </Link>
         <div className="register">
         <Title tit=" انشاء حساب داخل الموقع " styleForm={styleForm}/>
             <form>
@@ -30,6 +29,7 @@ export default function Register() {
             </div>
         </div>
     </section>
+    <Footer/>
     </>
   )
 }

@@ -1,22 +1,27 @@
 .logo-office {
-    max-height: 300px;
-    width: 300px;
-    padding: 20px;
+    width: 100%;
     border-radius: 50%;
-    padding-bottom: 0;
+    max-width: 300px;
+    height: 300px;
+    border: 2px solid var(--orange-color);
 }
 .about-image {
-    width: 100%;
-    box-shadow: inset 0 0 35px 12px #012;
-    background-color: #0129;
+    width: 90%;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 3px var(--white-color);
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
     gap: 5px;
-    margin: 20px 10px;
+    margin: 20px 0;
     border-bottom: none;
-    align-items: center;
+    align-items: start;
     justify-content: space-evenly;
+    position: relative;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 20px;
+    color: var(--white-color);
 }
 .about-image h1 {
     font-size: 25px;
@@ -72,10 +77,10 @@
     font-size: 18px;
     flex-wrap: wrap;
     justify-content: center;
-    color: #fff9;
+    color: white;
     padding-bottom: 25px;
 }
 .contact-about span {
-    border-bottom: 2px solid var(--white-color);
+    border-bottom: 2px solid white;
     padding-bottom: 5px;
 }

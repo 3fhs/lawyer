@@ -12,6 +12,9 @@ import DashBoard from './pages/dash-board/DashBoard';
 import Profile from 'pages/dash-board/your-profile/Profile';
 import Team from 'pages/dash-board/your-team/Team';
 import Report from 'pages/dash-board/all-report/Report';
+import TestimonialControl from 'pages/dash-board/testimonials/TestimonialControl';
+import LoginControl from 'pages/dash-board/login/LoginControl';
+import RegisterControl from 'pages/dash-board/register/RegisterControl';
 
 function App() {
 
@@ -22,7 +25,7 @@ function App() {
         <Route path='we-are' element={<WeAre/>}/>
         <Route path='write' element={<Writeing/>}/>
         <Route path='contact' element={<Contact/>}/>
-        <Route path='/port/:id' element={<AnyLaw/>}/>
+        <Route path='/report/:id' element={<AnyLaw/>}/>
         <Route path='/team/:id' element={<LinkTeam/>}/>
         <Route path='/login' element={<LogIn/>}/>
         <Route path='/register' element={<Register/>}/>
@@ -32,6 +35,9 @@ function App() {
           <Route index element={<Profile/>}/>
           <Route path='team' element={<Team/>}/>
           <Route path='report' element={<Report/>}/>
+          <Route path='testimonial' element={<TestimonialControl/>}/>
+          <Route path='login' element={<LoginControl/>}/>
+          <Route path='register' element={<RegisterControl/>}/>
         </Route>
       </Routes>
     </div>

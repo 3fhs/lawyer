@@ -11,10 +11,12 @@ import ListItemText from '@mui/material/ListItemText';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import SummarizeOutlinedIcon from '@mui/icons-material/SummarizeOutlined';
+import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
+import LoginIcon from '@mui/icons-material/Login';
+import HowToRegTwoToneIcon from '@mui/icons-material/HowToRegTwoTone';
 import { styled } from '@mui/material/styles';
 import { Avatar, Typography, useTheme } from '@mui/material';
 import { useLocation, useNavigate } from 'react-router-dom';
-
 
 const drawerWidth = 240;
 
@@ -90,6 +92,23 @@ const arrayOne = [
     name: "Report",
     icon: <SummarizeOutlinedIcon />,
     path: "/dash-board/report",
+  }
+]
+const arrayTwo = [
+  {
+    name: "Testimonial",
+    icon: <CommentOutlinedIcon />,
+    path: "/dash-board/testimonial",
+  },
+  {
+    name: "Login",
+    icon: <LoginIcon />,
+    path: "/dash-board/login",
+  },
+  {
+    name: "Register",
+    icon: <HowToRegTwoToneIcon />,
+    path: "/dash-board/register",
   },
 ]
 
@@ -115,7 +134,7 @@ function DashSideLeft({handleDrawerClose, open, info}) {
           sx={{ width: 56, height: 56, mx: "auto", my: "10px", border: "2px solid #7774" }}
         />
         <Typography sx={{fontSize: open ? 18 : 0, transition: "0.25s" }} align='center'> Mohamed Abd Elghany </Typography>
-        <Typography sx={{fontSize: 16}} align='center'> Admin </Typography>
+        <Typography sx={{fontSize: 16, color: theme.palette.info.dark}} align='center'> Admin </Typography>
 
         <List>
         {arrayOne.map((item) => (
@@ -163,6 +182,55 @@ function DashSideLeft({handleDrawerClose, open, info}) {
             </ListItem>
         ))}
         </List>
+
+        <Divider/>
+
+        <List>
+        {arrayTwo.map((item) => (
+            <ListItem key={item.path} disablePadding sx={{ display: 'block' }}>
+            <ListItemButton
+                sx={{
+                    minHeight: 48,
+                    px: 2.5,
+                    justifyContent: open ? 'initial' : 'center',
+                    bgcolor: location.pathname === item.path ? theme.palette.info.main : ""
+                }}
+
+                onClick={() => navigate(item.path)}
+            >
+                <ListItemIcon
+                sx={[
+                    {
+                    minWidth: 0,
+                    justifyContent: 'center',
+                    },
+                    open
+                    ? {
+                        mr: 3,
+                        }
+                    : {
+                        mr: 'auto',
+                        },
+                ]}
+                >
+                {item.icon}
+                </ListItemIcon>
+                <ListItemText
+                primary={item.name}
+                sx={[
+                    open
+                    ? {
+                        opacity: 1,
+                        }
+                    : {
+                        opacity: 0,
+                        },
+                ]}
+                />
+            </ListItemButton>
+            </ListItem>
+        ))}
+        </List>        
 
 
         <Divider />

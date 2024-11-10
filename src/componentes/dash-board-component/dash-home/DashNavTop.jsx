@@ -6,8 +6,8 @@ import MuiAppBar from '@mui/material/AppBar';
 import SearchIcon from '@mui/icons-material/Search';
 import Stack from '@mui/material/Stack';
 import BedtimeOutlinedIcon from '@mui/icons-material/BedtimeOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+// import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+// import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import HomeIcon from '@mui/icons-material/Home';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { Link } from 'react-router-dom';
@@ -133,7 +133,7 @@ function DashNavTop({handleDrawerOpen, open , theme, setMode, info}) {
               <IconButton color='inherit' component={Link} to='/'>
                 <HomeIcon />
               </IconButton>
-              <IconButton color='inherit'>
+              {/* <IconButton color='inherit'>
                 <NotificationsNoneOutlinedIcon/>
               </IconButton>
               <IconButton color='inherit'>
@@ -141,7 +141,7 @@ function DashNavTop({handleDrawerOpen, open , theme, setMode, info}) {
               </IconButton>
               <IconButton color='inherit'>
                 <img src={info.photo} alt='my name' style={{width:'30px', height:'30px', borderRadius:'50%'}}/>
-              </IconButton>
+              </IconButton> */}
             </Stack>
 
         </Toolbar>

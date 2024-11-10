@@ -10,12 +10,11 @@
   box-sizing: border-box;
 }
 :root {
-  --black-color: #000000;
-  --white-color: #ffffff;
-  --danger-color: #bc4848;
+  --black-color: #111;
+  --white-color: #fff;
   --red-color: #ff5656;
   --light-color: #ffd700;
-  --orange-color: #ffd558;
+  --orange-color: #ffd900ed;
   --form-color: #1c0d0d;
 }
 body {
@@ -34,18 +33,17 @@ a {
 section {
     padding: 20px 30px;
     width: 100%;
-    color: var(--white-color);
+    color: var(--black-color);
     min-height: 100vh;
-    background: linear-gradient(45deg, var(--black-color), var(--danger-color), var(--black-color));
+    background: var(--white-color);
     position: relative;
     z-index: 2;
 }
 .btn-click {
   padding: 10px 20px;
   font-size: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 2px var(--white-color);
-  background: var(--danger-color);
+  border-radius: 6px;
+  background: #123456 !important;
   color: var(--white-color);
   outline: none;
   font-weight: bold;
@@ -56,17 +54,24 @@ section {
   letter-spacing: 2px;
 }
 .btn-click:hover {
-  background-color: var(--red-color);
+  background-color: #163f68 !important;
 }
 .sec-form {
   background-image: url("./image/back-contact.jpg");
+}
+.sec-section {
+  background-image: url('./image/backsection.webp');
+}
+.sec-form, 
+.sec-section {
   background-size: cover;
   background-position: center;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
 }
-.sec-form::after {
+.sec-form::after,
+.sec-section::after {
   position: absolute;
   content: "";
   width: 100%;

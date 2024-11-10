@@ -41,23 +41,30 @@ export default function Contact() {
   return (
     <>
         <NavBar/>
-        <section className="sec-form">
+        <section className="sec-section">
           <Title tit=" تستطيع مراسلتنا عن طريق البريد " des=" مع تحياتى لكم أ / محمد عبد الغنى حسين "/>
           <div className="contact-me">
             <form ref={form} onSubmit={sendEmail}>
-              <label htmlFor="name">الاسم:</label>
-              <input type="text" id="name" name="name" placeholder='من فضلك اكتب اسمك' required
-                value={name} onChange={(e) => setName(e.target.value)}/>
 
-              <label htmlFor="email">البريد الإلكتروني:</label>
-              <input type="email" id="email" name="email" placeholder='من فضلك اكتب بريدك' required
-                value={email} onChange={(e) => setEmail(e.target.value)}/>
+              <div style={{display:'flex', alignItems:'start', flexDirection:'column', gap:'20px',maxWidth:'300px'}}>                
+                <label htmlFor="name">الاسم:</label>
+                <input type="text" id="name" name="name" placeholder='من فضلك اكتب اسمك' required
+                  value={name} onChange={(e) => setName(e.target.value)}
+                />
 
-              <label htmlFor="message">رسالتك:</label>
-              <textarea id="message" name="message" placeholder='من فضلك اكتب رسالتك و استفسارك لنا' required
-                value={text} onChange={(e) => setText(e.target.value)}></textarea>
+                <label htmlFor="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" placeholder='من فضلك اكتب بريدك' required
+                  value={email} onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              
+              <div style={{display:'flex', alignItems:'start', flexDirection:'column', gap:'20px',flexGrow:'1'}}>
+                <label htmlFor="message">رسالتك:</label>
+                <textarea id="message" name="message" placeholder='من فضلك اكتب رسالتك و استفسارك لنا' required
+                  value={text} onChange={(e) => setText(e.target.value)}></textarea>
 
-              <input className='btn-click' type="submit" value="إرسال"/>
+                <button className='btn-click' type="submit" value="إرسال"> إرسال </button>
+              </div>
             </form>
           </div>
         </section>

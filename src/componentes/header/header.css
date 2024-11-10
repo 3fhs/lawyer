@@ -1,9 +1,3 @@
-.header {
-    background-image: url('../../image/backsection.webp');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
 .header::after {
     content: '';
     position: absolute;
@@ -18,6 +12,7 @@
     height: 100%;
     width: 100%;
     position: relative;
+    padding-bottom: 10px;
 }
 .section-office {
     display: flex;
@@ -27,8 +22,8 @@
     padding: 0 30px;
 }
 .section-office .logo-office {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 300px;
+    max-height: 300px;
     border-radius: 50%;
 }
 .section-office .info-office {
@@ -55,23 +50,55 @@
 }
 .container .info {
     width: 100%;
-    height: 10%;
-    background-color: var(--orange-color);
+    min-width: 350px;
+    background-color: transparent;
+    display: flex;
+    overflow: hidden;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    overflow: hidden;
-    padding: 10px;
+    justify-content: center;
 }
-.container .info .info-name {
+.container .info::after,
+.container .info::before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 20px;
+    border: 35px solid #ffd900c7;
+    z-index: -1;
+    border-radius: 50%;
+}
+.container .info::after {
+    border-right: 30px solid transparent;
+    right: 0;
+}
+.container .info::before {
+    border-left: 30px solid transparent;  
+    left: 0; 
+}
+.info .info-count {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 10px;
+    width: 80%;
+    background-color: var(--orange-color);
+    border-radius: 6px;
+    position: relative;
+    z-index: 20;
+}
+.info ,.info-count .info-name {
     text-align: center;
     color: var(--black-color);
     text-shadow: 0 0 5px var(--danger-color);
     font-size: 16px;
     font-weight: bold;
 }
-.container .info .info-name h3,
-.container .info .info-name p {
+.info .info-count .info-name h3,
+.info .info-count .info-name p {
     padding: 0;
     margin: 0;
 }

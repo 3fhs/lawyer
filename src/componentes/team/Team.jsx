@@ -5,8 +5,17 @@ import { Link } from 'react-router-dom';
 import Title from "../title/Title";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // استيراد ملفات CSS الخاصة بـ AOS
+import { useDispatch, useSelector } from 'react-redux';
+import { teamApi } from '../../redux/apiCalls/TeamApiCall';
 
 export default function Team() {
+
+  const dispatch = useDispatch();
+  const {team} = useSelector(state => state.team);
+
+  useEffect(() => {
+    dispatch(teamApi())
+  }, [dispatch])
 
   useEffect(() => {
     AOS.init({
@@ -18,13 +27,15 @@ export default function Team() {
     <div className='team'>
       <Title tit=" السادة اعضاء المكتب " />
         <div className='team-card'>
-            {kinds.team.map(lawyer => (
+            {team.map(lawyer => (
                     <div className='card' key={lawyer.id} data-aos="fade-right">
                         <Link to={`/team/${lawyer.id}`}>
                            <img src={lawyer.image} alt='logo-icon'/>
                         </Link>
                         <h2> أ / {lawyer.name} </h2>
                         <p> {lawyer.work} </p>
+                        <p> {lawyer.deg} </p>
+                        
                         <div className='icon'>
                           <i className="bi bi-star-fill"></i>
                           <i className="bi bi-star-fill"></i>
