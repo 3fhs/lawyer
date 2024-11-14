@@ -27,20 +27,14 @@ export default function Team() {
       <Title tit=" السادة اعضاء المكتب " />
         <div className='team-card'>
             {team.map(lawyer => (
-                    <div className='card' key={lawyer.id} data-aos="fade-right">
-                        <Link to={`/team/${lawyer.id}`}>
+                    <Link to={`/team/${lawyer.id}`} className='card' key={lawyer.id} data-aos="fade-right">
+                        <div>
                            <img src={lawyer.image} alt='logo-icon'/>
-                        </Link>
+                        </div>
                         <h2> أ / {lawyer.name} </h2>
                         <p> {lawyer.work} </p>
                         <p> {lawyer.deg} </p>
-                        
-                        <div className='icon'>
-                          <i className="bi bi-star-fill"></i>
-                          <i className="bi bi-star-fill"></i>
-                          <i className="bi bi-star-fill"></i>
-                        </div>
-                    </div>
+                    </Link>
             ) 
             )}
         </div>

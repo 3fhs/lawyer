@@ -1,6 +1,9 @@
 .team {
     padding: 0 30px 50px;
-    background-image: url("../../image/office-lawyer.webp");
+    background-image: url("../../image/Djnj953W4AAFi0R.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     border-top: 2px solid var(--orange-color);
     border-bottom: 2px solid var(--orange-color);
     overflow: hidden;
@@ -55,7 +58,7 @@
 }
 /*link team*/
 .link-team {
-    background-image: url("../../image/book2.jpg");
+    background-image: url("../../image/team-one.jpg");
     display: flex;
     flex-wrap: wrap;
     align-items: start;
@@ -63,17 +66,17 @@
     border-radius: 6px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
-    padding: 10px;
+    background-size: cover;
+    box-shadow: 0 0 5px 2px #000;
+    padding: 5px;
     border-radius: 5%;
 }
 .link-team img {
     max-height: 300px;
     max-width: 300px;
-    border-radius: 12px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: top;
-    padding: 10px;
     box-shadow: 0 0 10px 1px var(--black-color);
     height: 100%;
     width: 100%;
@@ -84,14 +87,16 @@
     color: var(--white-color);
 }
 .link-team-info h1 {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 10px;
     font-weight: bold;
     text-decoration: underline;
+    text-align: center;
 }
 .link-team-info p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
+    font-weight: 400;
     letter-spacing: 1px;
     text-align: center;
     margin-bottom: 10px;

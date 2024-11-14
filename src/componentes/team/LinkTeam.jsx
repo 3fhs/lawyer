@@ -5,7 +5,7 @@ import Footer from '../footer/Footer';
 import "./team.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { teamApi } from '../../redux/apiCalls/TeamApiCall';
-import imageSec from '../../image/office-lawyer.webp';
+import imageSec from '../../image/Djnj953W4AAFi0R.jpg';
 
 export default function LinkTeam() {
 
