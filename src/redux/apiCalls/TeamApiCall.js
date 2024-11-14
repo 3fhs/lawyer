@@ -14,6 +14,7 @@ export function teamApi() {
     }
 }
 
+
 export function addLawyerApiWithImage(formData) {
     return async (dispatch) => {
         try {
@@ -24,17 +25,17 @@ export function addLawyerApiWithImage(formData) {
             if (imageResponse && imageResponse.secure_url) {
                 console.log("Cloudinary secure_url:", imageResponse.secure_url);
 
-                // إضافة رابط الصورة إلى formData
-                formData.set('image', imageResponse.secure_url);
+                // إعداد البيانات لارسالها بتنسيق JSON
+                const lawyerData = {
+                    name: formData.get('name'),
+                    work: formData.get('work'),
+                    deg: formData.get('deg'),
+                    image: imageResponse.secure_url,  // استخدام رابط الصورة من Cloudinary
+                };
 
-                // طباعة محتويات formData للتأكد
-                for (let [key, value] of formData.entries()) { 
-                    console.log(`${key}: ${value}`);
-                }
-
-                // إرسال formData إلى السيرفر
-                const response = await axios.post("http://localhost:5000/team", formData, {
-                    headers: { "Content-Type": "multipart/form-data" }
+                // إرسال البيانات إلى السيرفر
+                const response = await axios.post("http://localhost:5000/team", lawyerData, {
+                    headers: { "Content-Type": "application/json" }
                 });
 
                 console.log("API response:", response.data);
@@ -48,23 +49,42 @@ export function addLawyerApiWithImage(formData) {
     };
 }
 
-
 export function updateLawyerApiWithImage(id, formData) {
     return async (dispatch) => {
         try {
-            // تحقق إذا كان هناك صورة جديدة
-            if (formData.get('image')) {
-                const imageUrl = await uploadImageToCloudinary(formData.get('image'));
-                formData.set('image', imageUrl); // تعيين رابط الصورة الجديدة
+            let imageUrl = formData.get('image');
+
+            // التحقق إذا كانت هناك صورة جديدة
+            if (imageUrl) {
+                const imageResponse = await uploadImageToCloudinary(imageUrl);
+
+                // تحقق من وجود secure_url في الاستجابة
+                if (imageResponse && imageResponse.secure_url) {
+                    imageUrl = imageResponse.secure_url;
+                } else {
+                    console.error("Cloudinary response missing secure_url", imageResponse);
+                    return; // إنهاء الدالة إذا لم تتوفر الصورة
+                }
             }
 
-            // إرسال البيانات المحدثة إلى السيرفر
-            const response = await axios.put(`http://localhost:5000/team/${id}`, formData, {
-                headers: { "Content-Type": "multipart/form-data" }
+            // إعداد كائن البيانات لإرساله كـ JSON
+            const updatedMemberData = {
+                name: formData.get('name'),
+                work: formData.get('work'),
+                deg: formData.get('deg'),
+                image: imageUrl, // استخدام رابط الصورة المحدث
+            };
+
+            // إرسال البيانات إلى السيرفر
+            const response = await axios.put(`http://localhost:5000/team/${id}`, updatedMemberData, {
+                headers: { "Content-Type": "application/json" }
             });
+            
+            // التأكد من استجابة السيرفر
+            console.log("Update response:", response.data);
             dispatch(teamAction.setUpdateLawyer({ id, data: response.data }));
         } catch (error) {
-            console.log("Error updating lawyer with image:", error);
+            console.error("Error updating lawyer with image:", error);
         }
     };
 }

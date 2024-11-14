@@ -62,8 +62,7 @@
   .register-link a {
     font-size: 20px;
     text-decoration: underline;
-    color: var(--red-color);
-    background-color: #1119;
+    color: var(--orange-color);
     padding: 10px;
     border-right: 4px solid var(--white-color);
     border-radius: 4px;

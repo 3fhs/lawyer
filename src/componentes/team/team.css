@@ -1,6 +1,6 @@
 .team {
     padding: 0 30px 50px;
-    background: var(--white-color);
+    background-image: url("../../image/office-lawyer.webp");
     border-top: 2px solid var(--orange-color);
     border-bottom: 2px solid var(--orange-color);
     overflow: hidden;
@@ -55,59 +55,44 @@
 }
 /*link team*/
 .link-team {
+    background-image: url("../../image/book2.jpg");
     display: flex;
     flex-wrap: wrap;
     align-items: start;
     justify-content: space-around;
-    gap: 40px;
-    backdrop-filter: blur(8px);
-    background: #0009;
     border-radius: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
     padding: 10px;
-    box-shadow: 0 0 10px 6px #111;
+    border-radius: 5%;
 }
 .link-team img {
-    max-height: 400px;
+    max-height: 300px;
+    max-width: 300px;
     border-radius: 12px;
-    object-fit: fill;
+    object-fit: cover;
+    object-position: top;
+    padding: 10px;
     box-shadow: 0 0 10px 1px var(--black-color);
-    max-width: 400px;
-    min-height: 400px;
     height: 100%;
     width: 100%;
-    border: 10px solid var(--orange-color);
 }
 .link-team-info {
     padding: 20px;
-    max-width: 500px;
+    max-width: 250px;
     color: var(--white-color);
 }
 .link-team-info h1 {
-    font-size: 35px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
     text-decoration: underline;
 }
 .link-team-info p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
     letter-spacing: 1px;
-}
-.link-team-info ul {
-    margin-bottom: 10px;
-    text-align: start;
-    margin-right: 20px;
-    font-size: 20px;
-}
-.link-team-info ul h2 {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: underline;
     text-align: center;
-    margin: 5px 0;
-    letter-spacing: 1px;
-}
-.link-team-info ul li {
-    padding: 10px;
-    font-size: 18px;
+    margin-bottom: 10px;
 }

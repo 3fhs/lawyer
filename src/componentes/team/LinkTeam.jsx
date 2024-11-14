@@ -17,7 +17,7 @@ export default function LinkTeam() {
       dispatch(teamApi())
     }, [dispatch])
 
-    const selection = team?.find(fil => fil.id === +id);
+    const selection = team?.find(fil => fil.id === id);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -31,19 +31,9 @@ export default function LinkTeam() {
             <div className="link-team">
                 <img src={selection?.image} alt={selection?.name}/>
                 <div className="link-team-info">
-                    <h1> السيد/ة الاستاذ/ة : {selection?.name} </h1>
-                    <p> {selection?.deg} </p>
-                    <p> {selection?.des} </p>
-                    <ul>
-                        <h2> الشهادات </h2>
-                        <li>{selection?.edu.one}</li>
-                        <li>{selection?.edu.two}</li> 
-                    </ul>
-                    <ul>
-                        <h2> الخبرات </h2>
-                        <li>{selection?.expr.one}</li>
-                        <li>{selection?.expr.two}</li>
-                    </ul>
+                    <h1> الاستاذ/ة : {selection?.name} </h1>
+                    <p> {selection?.work} </p>
+                    <p> درجة القيد : {selection?.deg} </p>
                 </div>
             </div>
         </section>

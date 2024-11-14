@@ -17,7 +17,7 @@ export default function AnyLaw() {
     }, [dispatch])
 
     // تأكد من تحويل id إلى نفس النوع إذا كانت القيم في lawport أرقام
-    const selection = report?.find(fil => fil.id === +id);
+    const selection = report?.find(fil => fil.id === id);
 
     useEffect(() => {
         window.scrollTo(0,0);

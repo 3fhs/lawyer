@@ -39,25 +39,27 @@ function Team() {
   // إرسال FormData عند إضافة أو تعديل عضو
   const handleAddMember = () => {
     const formData = new FormData();
+  
     formData.append('name', newMember.name);
     formData.append('work', newMember.work);
     formData.append('deg', newMember.deg);
-
-    // إضافة الصورة إذا كانت موجودة
     if (newMember.imageFile) {
-        formData.append('image', newMember.imageFile);
+      formData.append('image', newMember.imageFile);
     }
-
+  
     if (newMember.id) {
-        // تعديل عضو
-        dispatch(updateLawyerApiWithImage(newMember.id, formData));
+      // تعديل عضو
+      dispatch(updateLawyerApiWithImage(newMember.id, formData));
     } else {
-        // إضافة عضو جديد
-        dispatch(addLawyerApiWithImage(formData));
+      // إضافة عضو جديد
+      dispatch(addLawyerApiWithImage(formData));
     }
-
+  
     handleClose();
-};
+  };
+  
+  
+
 
 
   const handleDeleteMember = (id) => dispatch(deleteLawyerApi(id));
@@ -99,9 +101,21 @@ const handleEditMember = (id) => {
                   {columns.map((column) => {
                     const value = row[column.id];
                     return (
-                      <TableCell key={column.id} align={column.align}>
+                      <TableCell style={{textAlign:'center'}} key={column.id} align={column.align}>
                         {column.id === 'image' ? (
-                          <img src={value} alt={row.name} width={50} style={{ height: '50px', borderRadius: '50%', objectFit: 'cover' }} />
+                          <img 
+                            src={value} 
+                            alt={row.name} 
+                            width={50} 
+                            style={{
+                              height: '50px',
+                              borderRadius: '50%',
+                              objectFit: 'cover',
+                              position: 'relative',
+                              left: '50%',
+                              transform: 'translateX(-50%)'
+                            }} 
+                          />
                         ) : column.id === 'settings' ? (
                           <>
                             <IconButton color="primary" aria-label="edit" onClick={() => handleEditMember(row.id)}><EditIcon /></IconButton>
@@ -148,6 +162,7 @@ const handleEditMember = (id) => {
           <TextField
             margin="dense"
             type="file"
+            accept="image/*"
             fullWidth
             onChange={(e) => setNewMember({ ...newMember, imageFile: e.target.files[0] })}
           />

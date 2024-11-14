@@ -17,7 +17,6 @@
     text-align: center;
     color: var(--black-color);
     position: relative;
-    cursor: pointer;
     letter-spacing: 1px;
     padding-bottom: 40px;
     background-color: var(--white-color);

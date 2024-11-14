@@ -191,15 +191,15 @@
     .bi-list {
       position: absolute;
       right: 0;
-      background-color: var(--white-color);
       font-size: 30px;
-      border-radius: 50% 0 0 50%;
+      border-radius: 10px 0 0 0;
       cursor: pointer;
       bottom: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 5px;
+      padding: 10px;
+      background-color: var(--orange-color);
     }
     .nav-links {
       position: absolute;
@@ -211,7 +211,6 @@
       width: 50%;
       z-index: 30;
       overflow: hidden;
-      background: var(--white-color);
       right: 0;
       border-bottom: 2px solid var(--black-color);
       border-left: 2px solid var(--black-color);

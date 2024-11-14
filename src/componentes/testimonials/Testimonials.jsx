@@ -79,8 +79,8 @@ function Testimonials() {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        {testimonial.map((item) => (
-          <SwiperSlide key={item.id}>
+        {testimonial.map((item, index) => (
+          <SwiperSlide key={index}>
             <div className='testimonial'>
               <h2>" {item.talk} "</h2>
               <div className='testi'>
