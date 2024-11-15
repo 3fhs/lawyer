@@ -74,16 +74,14 @@
 .link-team img {
     max-height: 300px;
     max-width: 300px;
-    border-radius: 50%;
+    border-radius: 50% 50% 5px 5px;
     object-fit: cover;
     object-position: top;
-    box-shadow: 0 0 10px 1px var(--black-color);
     height: 100%;
     width: 100%;
 }
 .link-team-info {
     padding: 20px;
-    max-width: 250px;
     color: var(--white-color);
 }
 .link-team-info h1 {
